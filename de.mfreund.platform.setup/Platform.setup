@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Project
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:git="http://www.eclipse.org/oomph/setup/git/1.0"
+    xmlns:predicates="http://www.eclipse.org/oomph/predicates/1.0"
+    xmlns:projects="http://www.eclipse.org/oomph/setup/projects/1.0"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    xmlns:setup.p2="http://www.eclipse.org/oomph/setup/p2/1.0"
+    xmlns:setup.workingsets="http://www.eclipse.org/oomph/setup/workingsets/1.0"
+    xsi:schemaLocation="http://www.eclipse.org/oomph/setup/git/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Git.ecore http://www.eclipse.org/oomph/predicates/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Predicates.ecore http://www.eclipse.org/oomph/setup/projects/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/Projects.ecore http://www.eclipse.org/oomph/setup/workingsets/1.0 http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/models/SetupWorkingSets.ecore"
+    name="platform"
+    label="Platform">
+  <setupTask
+      xsi:type="setup:EclipseIniTask"
+      option="-Doomph.redirection.setups"
+      value="=https://eats3.et.tu-dresden.de/git/staff/matthias/projects/platform/setup/Platform.setup->${clone.location|uri}/de.mfreund.platform.setup.git/de.mfreund.platform.setup/Platform.setup"
+      vm="true"/>
+  <setupTask
+      xsi:type="setup:EclipseIniTask"
+      option="-Xmx"
+      value="2048m"
+      vm="true"/>
+  <setupTask
+      xsi:type="setup.p2:P2Task"
+      label="Platform">
+    <requirement
+        name="org.eclipse.recommenders.rcp.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.recommenders.snipmatch.rcp.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.epp.package.modeling.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.wst.xml_ui.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.ocl.examples.feature.group"
+        versionRange="6.0.1"/>
+    <repository
+        url="http://download.eclipse.org/epsilon/updates/"/>
+    <repository
+        url="${ocl.examples.location}"/>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      id="preferences"
+      name="Preferences">
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.core.resources/refresh.enabled"
+        value="true"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.ocl.common/default.delegation.mode"
+        value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.ocl.common/code.generation.mode"
+        value="GENERATED"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.ui.ide/REFRESH_WORKSPACE_ON_STARTUP"
+        value="true"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.staticAccessReceiver"
+        value="error"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.possibleAccidentalBooleanAssignment"
+        value="warning"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.invalidJavadoc"
+        value="warning"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.invalidJavadocTags"
+        value="enabled"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.missingJavadocTags"
+        value="warning"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.missingJavadocTagsMethodTypeParameters"
+        value="enabled"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.ui/highlightBracketAtCaretLocation"
+        value="true"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.ui/sp_cleanup.correct_indentation"
+        value="true"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.jdt.ui/sp_cleanup.always_use_blocks"
+        value="true"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.debug.ui/Console.limitConsoleOutput"
+        value="false"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.egit.ui/remote_connection_timeout"
+        value="60"/>
+    <setupTask
+        xsi:type="setup:PreferenceTask"
+        key="/instance/org.eclipse.egit.ui/resourcehistory_show_all_branches"
+        value="true"/>
+    <description>This sets a bunch of preferences.</description>
+  </setupTask>
+  <setupTask
+      xsi:type="setup:VariableTask"
+      id="ocl.examples.location"
+      name="ocl.examples.location"
+      label="OCL examples update site location">
+    <description>
+      This is the path to the update site where version 6.0.1+ of the 'OCL examples' is located.
+
+      Note: This variable will be removed in the future as soon as version 6.0.1+ is included in the official OCL repository.
+    </description>
+  </setupTask>
+  <stream name="master">
+    <setupTask
+        xsi:type="setup:VariableTask"
+        id="clone.origin"
+        name="clone.origin"
+        defaultValue="G:\staff\matthias\projects\platform"
+        label="Clone origin">
+      <description>The URL where all projects will be cloned from.</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:VariableTask"
+        id="clone.location"
+        name="clone.location"
+        defaultValue=""
+        label="Clone location">
+      <description>The folder where all projects will be cloned to.</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        id="clone"
+        name="Clone Projects">
+      <setupTask
+          xsi:type="git:GitCloneTask"
+          id="clone.platform.samples"
+          location="${clone.location}\de.mfreund.platform.samples.git"
+          remoteURI="${clone.origin}\de.mfreund.platform.samples.git">
+        <description>Clone the 'de.mfreund.platform.samples.git' repository.</description>
+      </setupTask>
+      <setupTask
+          xsi:type="git:GitCloneTask"
+          id="clone.platform.feature"
+          location="${clone.location}\de.mfreund.platform.feature.git"
+          remoteURI="${clone.origin}\de.mfreund.platform.feature.git">
+        <description>Clone the 'de.mfreund.platform.feature.git' repository.</description>
+      </setupTask>
+      <setupTask
+          xsi:type="git:GitCloneTask"
+          id="clone.platform.model"
+          location="${clone.location}\de.mfreund.platform.model.git"
+          remoteURI="${clone.origin}\de.mfreund.platform.model.git">
+        <description>Clone the 'de.mfreund.platform.model.git' repository.</description>
+      </setupTask>
+      <setupTask
+          xsi:type="git:GitCloneTask"
+          id="clone.platform.setup"
+          location="${clone.location}\de.mfreund.platform.setup.git"
+          remoteURI="${clone.origin}\de.mfreund.platform.setup.git">
+        <description>Clone the 'de.mfreund.platform.setup.git' repository.</description>
+      </setupTask>
+      <setupTask
+          xsi:type="git:GitCloneTask"
+          id="clone.platform.update-site"
+          location="${clone.location}\de.mfreund.platform.update-site.git"
+          remoteURI="${clone.origin}\de.mfreund.platform.update-site.git">
+        <description>Clone the 'de.mfreund.platform.update-site.git' repository.</description>
+      </setupTask>
+      <description>Clone all necessary git repositories.</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        id="import"
+        name="Import Projects">
+      <setupTask
+          xsi:type="projects:ProjectsImportTask"
+          id="import.platform.samples">
+        <sourceLocator
+            rootFolder="${clone.location}\de.mfreund.platform.samples.git"/>
+      </setupTask>
+      <setupTask
+          xsi:type="projects:ProjectsImportTask"
+          id="import.platform.feature">
+        <sourceLocator
+            rootFolder="${clone.location}\de.mfreund.platform.feature.git"/>
+      </setupTask>
+      <setupTask
+          xsi:type="projects:ProjectsImportTask"
+          id="import.platform.model">
+        <sourceLocator
+            rootFolder="${clone.location}\de.mfreund.platform.model.git"/>
+      </setupTask>
+      <setupTask
+          xsi:type="projects:ProjectsImportTask"
+          id="import.platform.setup">
+        <sourceLocator
+            rootFolder="${clone.location}\de.mfreund.platform.setup.git"/>
+      </setupTask>
+      <setupTask
+          xsi:type="projects:ProjectsImportTask"
+          id="import.platform.update-site">
+        <sourceLocator
+            rootFolder="${clone.location}\de.mfreund.platform.update-site.git"/>
+      </setupTask>
+      <description>Import all necessary projects.</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup.workingsets:WorkingSetTask"
+        id="workingSets">
+      <workingSet
+          name="platform"
+          id="workingset.platform">
+        <predicate
+            xsi:type="predicates:NamePredicate"
+            pattern="de.mfreund.platform.*"/>
+      </workingSet>
+      <description>Add projects to working sets.</description>
+    </setupTask>
+  </stream>
+  <logicalProjectContainer
+      xsi:type="setup:ProjectCatalog"
+      href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
+  <description>The development environment for PAMTraM and GenTrans</description>
+</setup:Project>
