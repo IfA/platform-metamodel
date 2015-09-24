@@ -1,18 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/platform_Koltun_SA/src" modelPluginID="platform_Koltun_SA"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.mfreund.platform.model/src" editDirectory="/de.mfreund.platform.edit/src"
+    editorDirectory="/de.mfreund.platform.editor/src" modelPluginID="de.mfreund.platform.model"
     modelName="Platform" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    editPluginID="de.mfreund.platform.edit" editorPluginID="de.mfreund.platform.editor"
     operationReflection="true" importOrganizing="true">
   <foreignModel>platform.ecore</foreignModel>
   <genPackages prefix="Platform" disposableProviderFactory="true" ecorePackage="platform.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform.ecore#//PlatformType">
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//PlatformType/other"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//PlatformType/ClassicPC"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//PlatformType/IndustrialPc"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//PlatformType/Laptop"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//PlatformType/Smartphone"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//PlatformType/Tablet"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//PlatformType/HeadMountedDevice"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform.ecore#//InteractionModality">
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/visualInput"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/auditiveInput"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/tactileInput"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/proprioceptiveInput"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/visualOutput"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/auditiveOutput"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/tactileOutput"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/proprioceptiveOutput"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/other"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//InteractionModality/none"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform.ecore#//Sensibility">
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//Sensibility/other"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//Sensibility/nonsensitive"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//Sensibility/lowSensitive"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//Sensibility/normal"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//Sensibility/sensitive"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//Sensibility/highSensitive"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform.ecore#//KeyboardType">
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//KeyboardType/other"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//KeyboardType/alphanumerical"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//KeyboardType/numerical"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//KeyboardType/keypad"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//KeyboardType/phonepad"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform.ecore#//ElementaryTaskEvaluation">
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//ElementaryTaskEvaluation/other"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//ElementaryTaskEvaluation/none"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//ElementaryTaskEvaluation/insufficient"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//ElementaryTaskEvaluation/sufficient"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//ElementaryTaskEvaluation/good"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//ElementaryTaskEvaluation/veryGood"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform.ecore#//HardkeyType">
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//HardkeyType/MachineSpecific"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//HardkeyType/DialogueSpecific"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="platform.ecore#//SizeEvaluation">
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//SizeEvaluation/verySmall"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//SizeEvaluation/small"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//SizeEvaluation/middle"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//SizeEvaluation/big"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//SizeEvaluation/veryBig"/>
+      <genEnumLiterals ecoreEnumLiteral="platform.ecore#//SizeEvaluation/jumbo"/>
+    </genEnums>
+    <genClasses ecoreClass="platform.ecore#//PMbase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform.ecore#//PMbase/platformCollection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform.ecore#//PMbase/ressourceCollection"/>
+    </genClasses>
     <genClasses ecoreClass="platform.ecore#//Platform">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Platform/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Platform/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Platform/platformName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Platform/platformId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Platform/platformType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform.ecore#//Platform/ressources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform.ecore#//Platform/genericProperty"/>
     </genClasses>
     <genClasses ecoreClass="platform.ecore#//Ressource">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Ressource/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform.ecore#//Ressource/ressources"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Ressource/ressourceName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform.ecore#//Ressource/genericProperty"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="platform.ecore#//ComplexRessource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform.ecore#//ComplexRessource/subRessources"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//GenericProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//GenericProperty/propertyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//GenericProperty/propertyUnit"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//IntegerProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//IntegerProperty/integerValue"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//StringProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//StringProperty/stringValue"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//BooleanProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//BooleanProperty/booleanValue"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//FloatProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//FloatProperty/floatValue"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//InteractionProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//InteractionProperty/interactionModality"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//GenericComplexRessource"/>
+    <genClasses ecoreClass="platform.ecore#//Mouse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Mouse/mouseSensibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Mouse/usableForTranspartentSurface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Mouse/usableForSmoothSurface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform.ecore#//Mouse/mainPointingDevice"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform.ecore#//Mouse/leftMousebutton"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform.ecore#//Mouse/rightMousebutton"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//Keyboard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Keyboard/keyboardType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Keyboard/keyboardTypeExtraInfo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Keyboard/fastTextInput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Keyboard/easyTextInput"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform.ecore#//Keyboard/hardkeys"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform.ecore#//ElementaryRessource"/>
+    <genClasses image="false" ecoreClass="platform.ecore#//InteractionRessource"/>
+    <genClasses image="false" ecoreClass="platform.ecore#//InputDevice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//InputDevice/safeForUnwantedActions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//InputDevice/usableWithGloves"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//InputDevice/usableWithOneHand"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform.ecore#//ElementaryTasksForInputDevices">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//ElementaryTasksForInputDevices/fastPointingCapable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//ElementaryTasksForInputDevices/accuratePointingCapable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//ElementaryTasksForInputDevices/selectingCapable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//ElementaryTasksForInputDevices/drawingCapable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//ElementaryTasksForInputDevices/fastDrawingCapable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//ElementaryTasksForInputDevices/alphanumericCapable"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//VisualInputDevice"/>
+    <genClasses ecoreClass="platform.ecore#//LightingDevice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//LightingDevice/lightningType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//LightingDevice/lightSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//LightingDevice/multiColorConfigurable"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//Camera"/>
+    <genClasses ecoreClass="platform.ecore#//TactileInputDevice"/>
+    <genClasses ecoreClass="platform.ecore#//Hardkey">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Hardkey/buttonSymbol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Hardkey/buttonColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Hardkey/buttonSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Hardkey/hardkeyType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Hardkey/configurable"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//Touchscreen">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/xPixel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/yPixel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/forceForActuating"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/usableWithPen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/multiTouchCapable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/tactileFeedbackCapable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/touchGestureRecognition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Touchscreen/closenessRecognition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform.ecore#//Touchscreen/correspondDisplay"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//AuditiveInputDevice"/>
+    <genClasses ecoreClass="platform.ecore#//Microphone"/>
+    <genClasses ecoreClass="platform.ecore#//ProprioceptiveInputDevice"/>
+    <genClasses ecoreClass="platform.ecore#//PointingDevice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//PointingDevice/hasHighPrecision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//PointingDevice/degreesOfFreedom"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="platform.ecore#//OutputDevice"/>
+    <genClasses ecoreClass="platform.ecore#//VisualOutputDevice"/>
+    <genClasses ecoreClass="platform.ecore#//Display">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Display/xPixel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Display/yPixel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Display/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Display/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Display/isColorCapable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Display/isImagesCapable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform.ecore#//Display/isVideosCapable"/>
+    </genClasses>
+    <genClasses ecoreClass="platform.ecore#//TactileOutputDevice"/>
+    <genClasses ecoreClass="platform.ecore#//VibrationMotor"/>
+    <genClasses ecoreClass="platform.ecore#//AuditiveOutputDevice"/>
+    <genClasses ecoreClass="platform.ecore#//Speaker"/>
+    <genClasses ecoreClass="platform.ecore#//ProprioceptiveOutputDevice"/>
   </genPackages>
 </genmodel:GenModel>
