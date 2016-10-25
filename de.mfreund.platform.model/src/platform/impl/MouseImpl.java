@@ -15,9 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.ocl.pivot.evaluation.Evaluator;
-
+import org.eclipse.ocl.pivot.evaluation.Executor;
 import org.eclipse.ocl.pivot.ids.TypeId;
 
 import org.eclipse.ocl.pivot.internal.utilities.PivotUtilInternal;
@@ -26,8 +24,6 @@ import org.eclipse.ocl.pivot.library.oclany.OclComparableLessThanEqualOperation;
 
 import org.eclipse.ocl.pivot.library.string.CGStringGetSeverityOperation;
 import org.eclipse.ocl.pivot.library.string.CGStringLogDiagnosticOperation;
-
-import org.eclipse.ocl.pivot.utilities.ClassUtil;
 import org.eclipse.ocl.pivot.utilities.ValueUtil;
 
 import org.eclipse.ocl.pivot.values.IntegerValue;
@@ -363,25 +359,25 @@ public class MouseImpl extends ComplexRessourceImpl implements Mouse {
 		 *         'Mouse::leftUnequalRight'.logDiagnostic(self, null, diagnostics, context, null, severity, status, 0)
 		 *     endif
 		 */
-		final /*@NonNull*/ /*@NonInvalid*/ Evaluator evaluator = PivotUtilInternal.getEvaluator(this);
-		final /*@NonNull*/ /*@NonInvalid*/ IntegerValue severity_0 = ClassUtil.nonNullState(CGStringGetSeverityOperation.INSTANCE.evaluate(evaluator, PlatformTables.STR_Mouse_c_c_leftUnequalRight));
-		final /*@NonInvalid*/ boolean le = ClassUtil.nonNullState(OclComparableLessThanEqualOperation.INSTANCE.evaluate(evaluator, severity_0, PlatformTables.INT_0).booleanValue());
+		final /*@NonInvalid*/ Executor executor = PivotUtilInternal.getExecutor(this);
+		final /*@NonInvalid*/ IntegerValue severity_0 = CGStringGetSeverityOperation.INSTANCE.evaluate(executor, PlatformTables.STR_Mouse_c_c_leftUnequalRight);
+		final /*@NonInvalid*/ boolean le = OclComparableLessThanEqualOperation.INSTANCE.evaluate(executor, severity_0, PlatformTables.INT_0).booleanValue();
 		/*@NonInvalid*/ boolean symbol_0;
 		if (le) {
 		    symbol_0 = ValueUtil.TRUE_VALUE;
 		}
 		else {
-		    /*@NonNull*/ /*@Caught*/ Object CAUGHT_status;
+		    /*@Caught*/ /*@NonNull*/ Object CAUGHT_status;
 		    try {
-		        final /*@NonNull*/ /*@Thrown*/ Hardkey leftMousebutton = this.getLeftMousebutton();
-		        final /*@NonNull*/ /*@Thrown*/ Hardkey rightMousebutton = this.getRightMousebutton();
+		        final /*@Thrown*/ Hardkey leftMousebutton = this.getLeftMousebutton();
+		        final /*@Thrown*/ Hardkey rightMousebutton = this.getRightMousebutton();
 		        final /*@Thrown*/ boolean status = !leftMousebutton.equals(rightMousebutton);
 		        CAUGHT_status = status;
 		    }
 		    catch (Exception e) {
 		        CAUGHT_status = ValueUtil.createInvalidValue(e);
 		    }
-		    final /*@NonInvalid*/ boolean logDiagnostic = ClassUtil.nonNullState(CGStringLogDiagnosticOperation.INSTANCE.evaluate(evaluator, TypeId.BOOLEAN, PlatformTables.STR_Mouse_c_c_leftUnequalRight, this, null, diagnostics, context, null, severity_0, CAUGHT_status, PlatformTables.INT_0).booleanValue());
+		    final /*@NonInvalid*/ boolean logDiagnostic = CGStringLogDiagnosticOperation.INSTANCE.evaluate(executor, TypeId.BOOLEAN, PlatformTables.STR_Mouse_c_c_leftUnequalRight, this, null, diagnostics, context, null, severity_0, CAUGHT_status, PlatformTables.INT_0).booleanValue();
 		    symbol_0 = logDiagnostic;
 		}
 		return Boolean.TRUE == symbol_0;

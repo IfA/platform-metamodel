@@ -11,16 +11,6 @@
  *******************************************************************************/
 package platform;
 
-import java.lang.String;
-import org.eclipse.emf.ecore.EcorePackage;
-import org.eclipse.ocl.pivot.PivotTables;
-import org.eclipse.ocl.pivot.ids.ClassId;
-import org.eclipse.ocl.pivot.ids.CollectionTypeId;
-import org.eclipse.ocl.pivot.ids.DataTypeId;
-import org.eclipse.ocl.pivot.ids.EnumerationId;
-import org.eclipse.ocl.pivot.ids.IdManager;
-import org.eclipse.ocl.pivot.ids.NsURIPackageId;
-import org.eclipse.ocl.pivot.ids.TypeId;
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorEnumeration;
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorEnumerationLiteral;
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorPackage;
@@ -32,10 +22,8 @@ import org.eclipse.ocl.pivot.internal.library.executor.ExecutorOperation;
 import org.eclipse.ocl.pivot.internal.library.executor.ExecutorProperty;
 import org.eclipse.ocl.pivot.internal.library.executor.ExecutorPropertyWithImplementation;
 import org.eclipse.ocl.pivot.internal.library.executor.ExecutorStandardLibrary;
+import org.eclipse.ocl.pivot.internal.library.executor.ExecutorType;
 import org.eclipse.ocl.pivot.oclstdlib.OCLstdlibTables;
-import org.eclipse.ocl.pivot.utilities.ValueUtil;
-import org.eclipse.ocl.pivot.values.IntegerValue;
-import platform.PlatformPackage;
 import platform.PlatformTables;
 
 /**
@@ -64,38 +52,38 @@ public class PlatformTables
 	/**
 	 *	Constants used by auto-generated code.
 	 */
-    public static final /*@NonNull*/ /*@NonInvalid*/ NsURIPackageId PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel = IdManager.getNsURIPackageId("http://ifa/et/tu/dresden/platform/metamodel", null, PlatformPackage.eINSTANCE);
-    public static final /*@NonNull*/ /*@NonInvalid*/ NsURIPackageId PACKid_http_c_s_s_www_eclipse_org_s_emf_s_2002_s_Ecore = IdManager.getNsURIPackageId("http://www.eclipse.org/emf/2002/Ecore", null, EcorePackage.eINSTANCE);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_ComplexRessource = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("ComplexRessource", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_Display = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Display", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_GenericProperty = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("GenericProperty", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_Hardkey = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Hardkey", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_Keyboard = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Keyboard", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_Mouse = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Mouse", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_PMbase = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("PMbase", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_Platform = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Platform", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_PointingDevice = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("PointingDevice", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_Ressource = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Ressource", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ ClassId CLSSid_Touchscreen = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Touchscreen", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ DataTypeId DATAid_EFloat = PlatformTables.PACKid_http_c_s_s_www_eclipse_org_s_emf_s_2002_s_Ecore.getDataTypeId("EFloat", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ DataTypeId DATAid_EInt = PlatformTables.PACKid_http_c_s_s_www_eclipse_org_s_emf_s_2002_s_Ecore.getDataTypeId("EInt", 0);
-    public static final /*@NonNull*/ /*@NonInvalid*/ EnumerationId ENUMid_ElementaryTaskEvaluation = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("ElementaryTaskEvaluation");
-    public static final /*@NonNull*/ /*@NonInvalid*/ EnumerationId ENUMid_HardkeyType = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("HardkeyType");
-    public static final /*@NonNull*/ /*@NonInvalid*/ EnumerationId ENUMid_InteractionModality = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("InteractionModality");
-    public static final /*@NonNull*/ /*@NonInvalid*/ EnumerationId ENUMid_KeyboardType = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("KeyboardType");
-    public static final /*@NonNull*/ /*@NonInvalid*/ EnumerationId ENUMid_PlatformType = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("PlatformType");
-    public static final /*@NonNull*/ /*@NonInvalid*/ EnumerationId ENUMid_Sensibility = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("Sensibility");
-    public static final /*@NonNull*/ /*@NonInvalid*/ EnumerationId ENUMid_SizeEvaluation = PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("SizeEvaluation");
-    public static final /*@NonNull*/ /*@NonInvalid*/ IntegerValue INT_0 = ValueUtil.integerValueOf("0");
-    public static final /*@NonNull*/ /*@NonInvalid*/ String STR_Mouse_c_c_leftUnequalRight = "Mouse::leftUnequalRight";
-    public static final /*@NonNull*/ /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Keyboard = TypeId.BAG.getSpecializedId(PlatformTables.CLSSid_Keyboard);
-    public static final /*@NonNull*/ /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Mouse = TypeId.BAG.getSpecializedId(PlatformTables.CLSSid_Mouse);
-    public static final /*@NonNull*/ /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Platform = TypeId.BAG.getSpecializedId(PlatformTables.CLSSid_Platform);
-    public static final /*@NonNull*/ /*@NonInvalid*/ CollectionTypeId BAG_CLSSid_Touchscreen = TypeId.BAG.getSpecializedId(PlatformTables.CLSSid_Touchscreen);
-    public static final /*@NonNull*/ /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_GenericProperty = TypeId.ORDERED_SET.getSpecializedId(PlatformTables.CLSSid_GenericProperty);
-    public static final /*@NonNull*/ /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Hardkey = TypeId.ORDERED_SET.getSpecializedId(PlatformTables.CLSSid_Hardkey);
-    public static final /*@NonNull*/ /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Platform = TypeId.ORDERED_SET.getSpecializedId(PlatformTables.CLSSid_Platform);
-    public static final /*@NonNull*/ /*@NonInvalid*/ CollectionTypeId ORD_CLSSid_Ressource = TypeId.ORDERED_SET.getSpecializedId(PlatformTables.CLSSid_Ressource);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.NsURIPackageId PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel = org.eclipse.ocl.pivot.ids.IdManager.getNsURIPackageId("http://ifa/et/tu/dresden/platform/metamodel", null, platform.PlatformPackage.eINSTANCE);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.NsURIPackageId PACKid_http_c_s_s_www_eclipse_org_s_emf_s_2002_s_Ecore = org.eclipse.ocl.pivot.ids.IdManager.getNsURIPackageId("http://www.eclipse.org/emf/2002/Ecore", null, org.eclipse.emf.ecore.EcorePackage.eINSTANCE);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_ComplexRessource = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("ComplexRessource", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Display = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Display", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_GenericProperty = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("GenericProperty", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Hardkey = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Hardkey", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Keyboard = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Keyboard", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Mouse = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Mouse", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_PMbase = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("PMbase", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Platform = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Platform", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_PointingDevice = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("PointingDevice", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Ressource = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Ressource", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.ClassId CLSSid_Touchscreen = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getClassId("Touchscreen", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_EFloat = platform.PlatformTables.PACKid_http_c_s_s_www_eclipse_org_s_emf_s_2002_s_Ecore.getDataTypeId("EFloat", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.DataTypeId DATAid_EInt = platform.PlatformTables.PACKid_http_c_s_s_www_eclipse_org_s_emf_s_2002_s_Ecore.getDataTypeId("EInt", 0);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_ElementaryTaskEvaluation = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("ElementaryTaskEvaluation");
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_HardkeyType = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("HardkeyType");
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_InteractionModality = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("InteractionModality");
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_KeyboardType = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("KeyboardType");
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_PlatformType = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("PlatformType");
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_Sensibility = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("Sensibility");
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.EnumerationId ENUMid_SizeEvaluation = platform.PlatformTables.PACKid_http_c_s_s_ifa_s_et_s_tu_s_dresden_s_platform_s_metamodel.getEnumerationId("SizeEvaluation");
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.values.IntegerValue INT_0 = org.eclipse.ocl.pivot.utilities.ValueUtil.integerValueOf("0");
+    public static final /*@NonInvalid*/ java.lang.String STR_Mouse_c_c_leftUnequalRight = "Mouse::leftUnequalRight";
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_Keyboard = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(platform.PlatformTables.CLSSid_Keyboard);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_Mouse = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(platform.PlatformTables.CLSSid_Mouse);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_Platform = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(platform.PlatformTables.CLSSid_Platform);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId BAG_CLSSid_Touchscreen = org.eclipse.ocl.pivot.ids.TypeId.BAG.getSpecializedId(platform.PlatformTables.CLSSid_Touchscreen);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId ORD_CLSSid_GenericProperty = org.eclipse.ocl.pivot.ids.TypeId.ORDERED_SET.getSpecializedId(platform.PlatformTables.CLSSid_GenericProperty);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId ORD_CLSSid_Hardkey = org.eclipse.ocl.pivot.ids.TypeId.ORDERED_SET.getSpecializedId(platform.PlatformTables.CLSSid_Hardkey);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId ORD_CLSSid_Platform = org.eclipse.ocl.pivot.ids.TypeId.ORDERED_SET.getSpecializedId(platform.PlatformTables.CLSSid_Platform);
+    public static final /*@NonInvalid*/ org.eclipse.ocl.pivot.ids.CollectionTypeId ORD_CLSSid_Ressource = org.eclipse.ocl.pivot.ids.TypeId.ORDERED_SET.getSpecializedId(platform.PlatformTables.CLSSid_Ressource);
 
 	/**
 	 *	The type parameters for templated types and operations.
@@ -129,34 +117,34 @@ public class PlatformTables
 		public static final /*@NonNull*/ EcoreExecutorType _AuditiveOutputDevice = new EcoreExecutorType(PlatformPackage.Literals.AUDITIVE_OUTPUT_DEVICE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _BooleanProperty = new EcoreExecutorType(PlatformPackage.Literals.BOOLEAN_PROPERTY, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Camera = new EcoreExecutorType(PlatformPackage.Literals.CAMERA, PACKAGE, 0);
-		public static final /*@NonNull*/ EcoreExecutorType _ComplexRessource = new EcoreExecutorType(PlatformPackage.Literals.COMPLEX_RESSOURCE, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _ComplexRessource = new EcoreExecutorType(PlatformPackage.Literals.COMPLEX_RESSOURCE, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final /*@NonNull*/ EcoreExecutorType _Display = new EcoreExecutorType(PlatformPackage.Literals.DISPLAY, PACKAGE, 0);
-		public static final /*@NonNull*/ EcoreExecutorType _ElementaryRessource = new EcoreExecutorType(PlatformPackage.Literals.ELEMENTARY_RESSOURCE, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _ElementaryRessource = new EcoreExecutorType(PlatformPackage.Literals.ELEMENTARY_RESSOURCE, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final /*@NonNull*/ EcoreExecutorEnumeration _ElementaryTaskEvaluation = new EcoreExecutorEnumeration(PlatformPackage.Literals.ELEMENTARY_TASK_EVALUATION, PACKAGE, 0);
-		public static final /*@NonNull*/ EcoreExecutorType _ElementaryTasksForInputDevices = new EcoreExecutorType(PlatformPackage.Literals.ELEMENTARY_TASKS_FOR_INPUT_DEVICES, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _ElementaryTasksForInputDevices = new EcoreExecutorType(PlatformPackage.Literals.ELEMENTARY_TASKS_FOR_INPUT_DEVICES, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final /*@NonNull*/ EcoreExecutorType _FloatProperty = new EcoreExecutorType(PlatformPackage.Literals.FLOAT_PROPERTY, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _GenericComplexRessource = new EcoreExecutorType(PlatformPackage.Literals.GENERIC_COMPLEX_RESSOURCE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _GenericProperty = new EcoreExecutorType(PlatformPackage.Literals.GENERIC_PROPERTY, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Hardkey = new EcoreExecutorType(PlatformPackage.Literals.HARDKEY, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorEnumeration _HardkeyType = new EcoreExecutorEnumeration(PlatformPackage.Literals.HARDKEY_TYPE, PACKAGE, 0);
-		public static final /*@NonNull*/ EcoreExecutorType _InputDevice = new EcoreExecutorType(PlatformPackage.Literals.INPUT_DEVICE, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _InputDevice = new EcoreExecutorType(PlatformPackage.Literals.INPUT_DEVICE, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final /*@NonNull*/ EcoreExecutorType _IntegerProperty = new EcoreExecutorType(PlatformPackage.Literals.INTEGER_PROPERTY, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorEnumeration _InteractionModality = new EcoreExecutorEnumeration(PlatformPackage.Literals.INTERACTION_MODALITY, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _InteractionProperty = new EcoreExecutorType(PlatformPackage.Literals.INTERACTION_PROPERTY, PACKAGE, 0);
-		public static final /*@NonNull*/ EcoreExecutorType _InteractionRessource = new EcoreExecutorType(PlatformPackage.Literals.INTERACTION_RESSOURCE, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _InteractionRessource = new EcoreExecutorType(PlatformPackage.Literals.INTERACTION_RESSOURCE, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final /*@NonNull*/ EcoreExecutorType _Keyboard = new EcoreExecutorType(PlatformPackage.Literals.KEYBOARD, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorEnumeration _KeyboardType = new EcoreExecutorEnumeration(PlatformPackage.Literals.KEYBOARD_TYPE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _LightingDevice = new EcoreExecutorType(PlatformPackage.Literals.LIGHTING_DEVICE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Microphone = new EcoreExecutorType(PlatformPackage.Literals.MICROPHONE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Mouse = new EcoreExecutorType(PlatformPackage.Literals.MOUSE, PACKAGE, 0);
-		public static final /*@NonNull*/ EcoreExecutorType _OutputDevice = new EcoreExecutorType(PlatformPackage.Literals.OUTPUT_DEVICE, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _OutputDevice = new EcoreExecutorType(PlatformPackage.Literals.OUTPUT_DEVICE, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final /*@NonNull*/ EcoreExecutorType _PMbase = new EcoreExecutorType(PlatformPackage.Literals.PMBASE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Platform = new EcoreExecutorType(PlatformPackage.Literals.PLATFORM, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorEnumeration _PlatformType = new EcoreExecutorEnumeration(PlatformPackage.Literals.PLATFORM_TYPE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _PointingDevice = new EcoreExecutorType(PlatformPackage.Literals.POINTING_DEVICE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _ProprioceptiveInputDevice = new EcoreExecutorType(PlatformPackage.Literals.PROPRIOCEPTIVE_INPUT_DEVICE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _ProprioceptiveOutputDevice = new EcoreExecutorType(PlatformPackage.Literals.PROPRIOCEPTIVE_OUTPUT_DEVICE, PACKAGE, 0);
-		public static final /*@NonNull*/ EcoreExecutorType _Ressource = new EcoreExecutorType(PlatformPackage.Literals.RESSOURCE, PACKAGE, 0);
+		public static final /*@NonNull*/ EcoreExecutorType _Ressource = new EcoreExecutorType(PlatformPackage.Literals.RESSOURCE, PACKAGE, 0 | ExecutorType.ABSTRACT);
 		public static final /*@NonNull*/ EcoreExecutorEnumeration _Sensibility = new EcoreExecutorEnumeration(PlatformPackage.Literals.SENSIBILITY, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorEnumeration _SizeEvaluation = new EcoreExecutorEnumeration(PlatformPackage.Literals.SIZE_EVALUATION, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _Speaker = new EcoreExecutorType(PlatformPackage.Literals.SPEAKER, PACKAGE, 0);
@@ -168,7 +156,7 @@ public class PlatformTables
 		public static final /*@NonNull*/ EcoreExecutorType _VisualInputDevice = new EcoreExecutorType(PlatformPackage.Literals.VISUAL_INPUT_DEVICE, PACKAGE, 0);
 		public static final /*@NonNull*/ EcoreExecutorType _VisualOutputDevice = new EcoreExecutorType(PlatformPackage.Literals.VISUAL_OUTPUT_DEVICE, PACKAGE, 0);
 
-		private static final /*@NonNull*/ EcoreExecutorType[] types = {
+		private static final /*@NonNull*/ EcoreExecutorType /*@NonNull*/ [] types = {
 			_AuditiveInputDevice,
 			_AuditiveOutputDevice,
 			_BooleanProperty,
@@ -287,20 +275,11 @@ public class PlatformTables
 		private static final /*@NonNull*/ ExecutorFragment _ElementaryRessource__OclElement = new ExecutorFragment(Types._ElementaryRessource, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _ElementaryRessource__Ressource = new ExecutorFragment(Types._ElementaryRessource, PlatformTables.Types._Ressource);
 
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__Class = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._Class);
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__DataType = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._DataType);
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__Element = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._Element);
 		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__ElementaryTaskEvaluation = new ExecutorFragment(Types._ElementaryTaskEvaluation, PlatformTables.Types._ElementaryTaskEvaluation);
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__Enumeration = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._Enumeration);
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__Nameable = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._Nameable);
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__NamedElement = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._NamedElement);
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__Namespace = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._Namespace);
 		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__OclAny = new ExecutorFragment(Types._ElementaryTaskEvaluation, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__OclElement = new ExecutorFragment(Types._ElementaryTaskEvaluation, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__OclEnumeration = new ExecutorFragment(Types._ElementaryTaskEvaluation, OCLstdlibTables.Types._OclEnumeration);
 		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__OclType = new ExecutorFragment(Types._ElementaryTaskEvaluation, OCLstdlibTables.Types._OclType);
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__TemplateableElement = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._TemplateableElement);
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__Type = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._Type);
-		private static final /*@NonNull*/ ExecutorFragment _ElementaryTaskEvaluation__Visitable = new ExecutorFragment(Types._ElementaryTaskEvaluation, PivotTables.Types._Visitable);
 
 		private static final /*@NonNull*/ ExecutorFragment _ElementaryTasksForInputDevices__ElementaryTasksForInputDevices = new ExecutorFragment(Types._ElementaryTasksForInputDevices, PlatformTables.Types._ElementaryTasksForInputDevices);
 		private static final /*@NonNull*/ ExecutorFragment _ElementaryTasksForInputDevices__OclAny = new ExecutorFragment(Types._ElementaryTasksForInputDevices, OCLstdlibTables.Types._OclAny);
@@ -331,20 +310,11 @@ public class PlatformTables
 		private static final /*@NonNull*/ ExecutorFragment _Hardkey__Ressource = new ExecutorFragment(Types._Hardkey, PlatformTables.Types._Ressource);
 		private static final /*@NonNull*/ ExecutorFragment _Hardkey__TactileInputDevice = new ExecutorFragment(Types._Hardkey, PlatformTables.Types._TactileInputDevice);
 
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__Class = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._Class);
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__DataType = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._DataType);
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__Element = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._Element);
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__Enumeration = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._Enumeration);
 		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__HardkeyType = new ExecutorFragment(Types._HardkeyType, PlatformTables.Types._HardkeyType);
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__Nameable = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._Nameable);
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__NamedElement = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._NamedElement);
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__Namespace = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._Namespace);
 		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__OclAny = new ExecutorFragment(Types._HardkeyType, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__OclElement = new ExecutorFragment(Types._HardkeyType, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__OclEnumeration = new ExecutorFragment(Types._HardkeyType, OCLstdlibTables.Types._OclEnumeration);
 		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__OclType = new ExecutorFragment(Types._HardkeyType, OCLstdlibTables.Types._OclType);
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__TemplateableElement = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._TemplateableElement);
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__Type = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._Type);
-		private static final /*@NonNull*/ ExecutorFragment _HardkeyType__Visitable = new ExecutorFragment(Types._HardkeyType, PivotTables.Types._Visitable);
 
 		private static final /*@NonNull*/ ExecutorFragment _InputDevice__ElementaryRessource = new ExecutorFragment(Types._InputDevice, PlatformTables.Types._ElementaryRessource);
 		private static final /*@NonNull*/ ExecutorFragment _InputDevice__ElementaryTasksForInputDevices = new ExecutorFragment(Types._InputDevice, PlatformTables.Types._ElementaryTasksForInputDevices);
@@ -359,20 +329,11 @@ public class PlatformTables
 		private static final /*@NonNull*/ ExecutorFragment _IntegerProperty__OclAny = new ExecutorFragment(Types._IntegerProperty, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _IntegerProperty__OclElement = new ExecutorFragment(Types._IntegerProperty, OCLstdlibTables.Types._OclElement);
 
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__Class = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._Class);
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__DataType = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._DataType);
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__Element = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._Element);
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__Enumeration = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._Enumeration);
 		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__InteractionModality = new ExecutorFragment(Types._InteractionModality, PlatformTables.Types._InteractionModality);
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__Nameable = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._Nameable);
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__NamedElement = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._NamedElement);
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__Namespace = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._Namespace);
 		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__OclAny = new ExecutorFragment(Types._InteractionModality, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__OclElement = new ExecutorFragment(Types._InteractionModality, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__OclEnumeration = new ExecutorFragment(Types._InteractionModality, OCLstdlibTables.Types._OclEnumeration);
 		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__OclType = new ExecutorFragment(Types._InteractionModality, OCLstdlibTables.Types._OclType);
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__TemplateableElement = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._TemplateableElement);
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__Type = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._Type);
-		private static final /*@NonNull*/ ExecutorFragment _InteractionModality__Visitable = new ExecutorFragment(Types._InteractionModality, PivotTables.Types._Visitable);
 
 		private static final /*@NonNull*/ ExecutorFragment _InteractionProperty__GenericProperty = new ExecutorFragment(Types._InteractionProperty, PlatformTables.Types._GenericProperty);
 		private static final /*@NonNull*/ ExecutorFragment _InteractionProperty__InteractionProperty = new ExecutorFragment(Types._InteractionProperty, PlatformTables.Types._InteractionProperty);
@@ -391,20 +352,11 @@ public class PlatformTables
 		private static final /*@NonNull*/ ExecutorFragment _Keyboard__OclElement = new ExecutorFragment(Types._Keyboard, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _Keyboard__Ressource = new ExecutorFragment(Types._Keyboard, PlatformTables.Types._Ressource);
 
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__Class = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._Class);
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__DataType = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._DataType);
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__Element = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._Element);
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__Enumeration = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._Enumeration);
 		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__KeyboardType = new ExecutorFragment(Types._KeyboardType, PlatformTables.Types._KeyboardType);
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__Nameable = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._Nameable);
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__NamedElement = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._NamedElement);
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__Namespace = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._Namespace);
 		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__OclAny = new ExecutorFragment(Types._KeyboardType, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__OclElement = new ExecutorFragment(Types._KeyboardType, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__OclEnumeration = new ExecutorFragment(Types._KeyboardType, OCLstdlibTables.Types._OclEnumeration);
 		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__OclType = new ExecutorFragment(Types._KeyboardType, OCLstdlibTables.Types._OclType);
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__TemplateableElement = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._TemplateableElement);
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__Type = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._Type);
-		private static final /*@NonNull*/ ExecutorFragment _KeyboardType__Visitable = new ExecutorFragment(Types._KeyboardType, PivotTables.Types._Visitable);
 
 		private static final /*@NonNull*/ ExecutorFragment _LightingDevice__ElementaryRessource = new ExecutorFragment(Types._LightingDevice, PlatformTables.Types._ElementaryRessource);
 		private static final /*@NonNull*/ ExecutorFragment _LightingDevice__InteractionRessource = new ExecutorFragment(Types._LightingDevice, PlatformTables.Types._InteractionRessource);
@@ -446,20 +398,11 @@ public class PlatformTables
 		private static final /*@NonNull*/ ExecutorFragment _Platform__OclElement = new ExecutorFragment(Types._Platform, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _Platform__Platform = new ExecutorFragment(Types._Platform, PlatformTables.Types._Platform);
 
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__Class = new ExecutorFragment(Types._PlatformType, PivotTables.Types._Class);
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__DataType = new ExecutorFragment(Types._PlatformType, PivotTables.Types._DataType);
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__Element = new ExecutorFragment(Types._PlatformType, PivotTables.Types._Element);
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__Enumeration = new ExecutorFragment(Types._PlatformType, PivotTables.Types._Enumeration);
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__Nameable = new ExecutorFragment(Types._PlatformType, PivotTables.Types._Nameable);
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__NamedElement = new ExecutorFragment(Types._PlatformType, PivotTables.Types._NamedElement);
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__Namespace = new ExecutorFragment(Types._PlatformType, PivotTables.Types._Namespace);
 		private static final /*@NonNull*/ ExecutorFragment _PlatformType__OclAny = new ExecutorFragment(Types._PlatformType, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _PlatformType__OclElement = new ExecutorFragment(Types._PlatformType, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _PlatformType__OclEnumeration = new ExecutorFragment(Types._PlatformType, OCLstdlibTables.Types._OclEnumeration);
 		private static final /*@NonNull*/ ExecutorFragment _PlatformType__OclType = new ExecutorFragment(Types._PlatformType, OCLstdlibTables.Types._OclType);
 		private static final /*@NonNull*/ ExecutorFragment _PlatformType__PlatformType = new ExecutorFragment(Types._PlatformType, PlatformTables.Types._PlatformType);
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__TemplateableElement = new ExecutorFragment(Types._PlatformType, PivotTables.Types._TemplateableElement);
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__Type = new ExecutorFragment(Types._PlatformType, PivotTables.Types._Type);
-		private static final /*@NonNull*/ ExecutorFragment _PlatformType__Visitable = new ExecutorFragment(Types._PlatformType, PivotTables.Types._Visitable);
 
 		private static final /*@NonNull*/ ExecutorFragment _PointingDevice__ElementaryRessource = new ExecutorFragment(Types._PointingDevice, PlatformTables.Types._ElementaryRessource);
 		private static final /*@NonNull*/ ExecutorFragment _PointingDevice__ElementaryTasksForInputDevices = new ExecutorFragment(Types._PointingDevice, PlatformTables.Types._ElementaryTasksForInputDevices);
@@ -491,35 +434,17 @@ public class PlatformTables
 		private static final /*@NonNull*/ ExecutorFragment _Ressource__OclElement = new ExecutorFragment(Types._Ressource, OCLstdlibTables.Types._OclElement);
 		private static final /*@NonNull*/ ExecutorFragment _Ressource__Ressource = new ExecutorFragment(Types._Ressource, PlatformTables.Types._Ressource);
 
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__Class = new ExecutorFragment(Types._Sensibility, PivotTables.Types._Class);
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__DataType = new ExecutorFragment(Types._Sensibility, PivotTables.Types._DataType);
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__Element = new ExecutorFragment(Types._Sensibility, PivotTables.Types._Element);
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__Enumeration = new ExecutorFragment(Types._Sensibility, PivotTables.Types._Enumeration);
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__Nameable = new ExecutorFragment(Types._Sensibility, PivotTables.Types._Nameable);
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__NamedElement = new ExecutorFragment(Types._Sensibility, PivotTables.Types._NamedElement);
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__Namespace = new ExecutorFragment(Types._Sensibility, PivotTables.Types._Namespace);
 		private static final /*@NonNull*/ ExecutorFragment _Sensibility__OclAny = new ExecutorFragment(Types._Sensibility, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _Sensibility__OclElement = new ExecutorFragment(Types._Sensibility, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _Sensibility__OclEnumeration = new ExecutorFragment(Types._Sensibility, OCLstdlibTables.Types._OclEnumeration);
 		private static final /*@NonNull*/ ExecutorFragment _Sensibility__OclType = new ExecutorFragment(Types._Sensibility, OCLstdlibTables.Types._OclType);
 		private static final /*@NonNull*/ ExecutorFragment _Sensibility__Sensibility = new ExecutorFragment(Types._Sensibility, PlatformTables.Types._Sensibility);
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__TemplateableElement = new ExecutorFragment(Types._Sensibility, PivotTables.Types._TemplateableElement);
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__Type = new ExecutorFragment(Types._Sensibility, PivotTables.Types._Type);
-		private static final /*@NonNull*/ ExecutorFragment _Sensibility__Visitable = new ExecutorFragment(Types._Sensibility, PivotTables.Types._Visitable);
 
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__Class = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._Class);
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__DataType = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._DataType);
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__Element = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._Element);
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__Enumeration = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._Enumeration);
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__Nameable = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._Nameable);
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__NamedElement = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._NamedElement);
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__Namespace = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._Namespace);
 		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__OclAny = new ExecutorFragment(Types._SizeEvaluation, OCLstdlibTables.Types._OclAny);
 		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__OclElement = new ExecutorFragment(Types._SizeEvaluation, OCLstdlibTables.Types._OclElement);
+		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__OclEnumeration = new ExecutorFragment(Types._SizeEvaluation, OCLstdlibTables.Types._OclEnumeration);
 		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__OclType = new ExecutorFragment(Types._SizeEvaluation, OCLstdlibTables.Types._OclType);
 		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__SizeEvaluation = new ExecutorFragment(Types._SizeEvaluation, PlatformTables.Types._SizeEvaluation);
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__TemplateableElement = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._TemplateableElement);
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__Type = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._Type);
-		private static final /*@NonNull*/ ExecutorFragment _SizeEvaluation__Visitable = new ExecutorFragment(Types._SizeEvaluation, PivotTables.Types._Visitable);
 
 		private static final /*@NonNull*/ ExecutorFragment _Speaker__AuditiveOutputDevice = new ExecutorFragment(Types._Speaker, PlatformTables.Types._AuditiveOutputDevice);
 		private static final /*@NonNull*/ ExecutorFragment _Speaker__ElementaryRessource = new ExecutorFragment(Types._Speaker, PlatformTables.Types._ElementaryRessource);
@@ -760,7 +685,7 @@ public class PlatformTables
 			Properties.init();
 		}
 
-		private static final /*@NonNull*/ ExecutorFragment[] _AuditiveInputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AuditiveInputDevice =
 		{
 			Fragments._AuditiveInputDevice__OclAny /* 0 */,
 			Fragments._AuditiveInputDevice__OclElement /* 1 */,
@@ -771,9 +696,9 @@ public class PlatformTables
 			Fragments._AuditiveInputDevice__InputDevice /* 5 */,
 			Fragments._AuditiveInputDevice__AuditiveInputDevice /* 6 */
 		};
-		private static final /*@NonNull*/ int[] __AuditiveInputDevice = { 1,1,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __AuditiveInputDevice = { 1,1,2,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _AuditiveOutputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _AuditiveOutputDevice =
 		{
 			Fragments._AuditiveOutputDevice__OclAny /* 0 */,
 			Fragments._AuditiveOutputDevice__OclElement /* 1 */,
@@ -783,18 +708,18 @@ public class PlatformTables
 			Fragments._AuditiveOutputDevice__OutputDevice /* 5 */,
 			Fragments._AuditiveOutputDevice__AuditiveOutputDevice /* 6 */
 		};
-		private static final /*@NonNull*/ int[] __AuditiveOutputDevice = { 1,1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __AuditiveOutputDevice = { 1,1,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _BooleanProperty =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _BooleanProperty =
 		{
 			Fragments._BooleanProperty__OclAny /* 0 */,
 			Fragments._BooleanProperty__OclElement /* 1 */,
 			Fragments._BooleanProperty__GenericProperty /* 2 */,
 			Fragments._BooleanProperty__BooleanProperty /* 3 */
 		};
-		private static final /*@NonNull*/ int[] __BooleanProperty = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __BooleanProperty = { 1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Camera =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Camera =
 		{
 			Fragments._Camera__OclAny /* 0 */,
 			Fragments._Camera__OclElement /* 1 */,
@@ -806,18 +731,18 @@ public class PlatformTables
 			Fragments._Camera__VisualInputDevice /* 6 */,
 			Fragments._Camera__Camera /* 7 */
 		};
-		private static final /*@NonNull*/ int[] __Camera = { 1,1,2,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Camera = { 1,1,2,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _ComplexRessource =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ComplexRessource =
 		{
 			Fragments._ComplexRessource__OclAny /* 0 */,
 			Fragments._ComplexRessource__OclElement /* 1 */,
 			Fragments._ComplexRessource__Ressource /* 2 */,
 			Fragments._ComplexRessource__ComplexRessource /* 3 */
 		};
-		private static final /*@NonNull*/ int[] __ComplexRessource = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __ComplexRessource = { 1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Display =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Display =
 		{
 			Fragments._Display__OclAny /* 0 */,
 			Fragments._Display__OclElement /* 1 */,
@@ -828,54 +753,45 @@ public class PlatformTables
 			Fragments._Display__VisualOutputDevice /* 6 */,
 			Fragments._Display__Display /* 7 */
 		};
-		private static final /*@NonNull*/ int[] __Display = { 1,1,1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Display = { 1,1,1,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _ElementaryRessource =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ElementaryRessource =
 		{
 			Fragments._ElementaryRessource__OclAny /* 0 */,
 			Fragments._ElementaryRessource__OclElement /* 1 */,
 			Fragments._ElementaryRessource__Ressource /* 2 */,
 			Fragments._ElementaryRessource__ElementaryRessource /* 3 */
 		};
-		private static final /*@NonNull*/ int[] __ElementaryRessource = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __ElementaryRessource = { 1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _ElementaryTaskEvaluation =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ElementaryTaskEvaluation =
 		{
 			Fragments._ElementaryTaskEvaluation__OclAny /* 0 */,
 			Fragments._ElementaryTaskEvaluation__OclElement /* 1 */,
-			Fragments._ElementaryTaskEvaluation__Nameable /* 2 */,
 			Fragments._ElementaryTaskEvaluation__OclType /* 2 */,
-			Fragments._ElementaryTaskEvaluation__Visitable /* 2 */,
-			Fragments._ElementaryTaskEvaluation__Element /* 3 */,
-			Fragments._ElementaryTaskEvaluation__NamedElement /* 4 */,
-			Fragments._ElementaryTaskEvaluation__TemplateableElement /* 4 */,
-			Fragments._ElementaryTaskEvaluation__Namespace /* 5 */,
-			Fragments._ElementaryTaskEvaluation__Type /* 5 */,
-			Fragments._ElementaryTaskEvaluation__Class /* 6 */,
-			Fragments._ElementaryTaskEvaluation__DataType /* 7 */,
-			Fragments._ElementaryTaskEvaluation__Enumeration /* 8 */,
-			Fragments._ElementaryTaskEvaluation__ElementaryTaskEvaluation /* 9 */
+			Fragments._ElementaryTaskEvaluation__OclEnumeration /* 3 */,
+			Fragments._ElementaryTaskEvaluation__ElementaryTaskEvaluation /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __ElementaryTaskEvaluation = { 1,1,3,1,2,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __ElementaryTaskEvaluation = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _ElementaryTasksForInputDevices =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ElementaryTasksForInputDevices =
 		{
 			Fragments._ElementaryTasksForInputDevices__OclAny /* 0 */,
 			Fragments._ElementaryTasksForInputDevices__OclElement /* 1 */,
 			Fragments._ElementaryTasksForInputDevices__ElementaryTasksForInputDevices /* 2 */
 		};
-		private static final /*@NonNull*/ int[] __ElementaryTasksForInputDevices = { 1,1,1 };
+		private static final int /*@NonNull*/ [] __ElementaryTasksForInputDevices = { 1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _FloatProperty =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _FloatProperty =
 		{
 			Fragments._FloatProperty__OclAny /* 0 */,
 			Fragments._FloatProperty__OclElement /* 1 */,
 			Fragments._FloatProperty__GenericProperty /* 2 */,
 			Fragments._FloatProperty__FloatProperty /* 3 */
 		};
-		private static final /*@NonNull*/ int[] __FloatProperty = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __FloatProperty = { 1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _GenericComplexRessource =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _GenericComplexRessource =
 		{
 			Fragments._GenericComplexRessource__OclAny /* 0 */,
 			Fragments._GenericComplexRessource__OclElement /* 1 */,
@@ -883,17 +799,17 @@ public class PlatformTables
 			Fragments._GenericComplexRessource__ComplexRessource /* 3 */,
 			Fragments._GenericComplexRessource__GenericComplexRessource /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __GenericComplexRessource = { 1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __GenericComplexRessource = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _GenericProperty =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _GenericProperty =
 		{
 			Fragments._GenericProperty__OclAny /* 0 */,
 			Fragments._GenericProperty__OclElement /* 1 */,
 			Fragments._GenericProperty__GenericProperty /* 2 */
 		};
-		private static final /*@NonNull*/ int[] __GenericProperty = { 1,1,1 };
+		private static final int /*@NonNull*/ [] __GenericProperty = { 1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Hardkey =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Hardkey =
 		{
 			Fragments._Hardkey__OclAny /* 0 */,
 			Fragments._Hardkey__OclElement /* 1 */,
@@ -905,28 +821,19 @@ public class PlatformTables
 			Fragments._Hardkey__TactileInputDevice /* 6 */,
 			Fragments._Hardkey__Hardkey /* 7 */
 		};
-		private static final /*@NonNull*/ int[] __Hardkey = { 1,1,2,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Hardkey = { 1,1,2,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _HardkeyType =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _HardkeyType =
 		{
 			Fragments._HardkeyType__OclAny /* 0 */,
 			Fragments._HardkeyType__OclElement /* 1 */,
-			Fragments._HardkeyType__Nameable /* 2 */,
 			Fragments._HardkeyType__OclType /* 2 */,
-			Fragments._HardkeyType__Visitable /* 2 */,
-			Fragments._HardkeyType__Element /* 3 */,
-			Fragments._HardkeyType__NamedElement /* 4 */,
-			Fragments._HardkeyType__TemplateableElement /* 4 */,
-			Fragments._HardkeyType__Namespace /* 5 */,
-			Fragments._HardkeyType__Type /* 5 */,
-			Fragments._HardkeyType__Class /* 6 */,
-			Fragments._HardkeyType__DataType /* 7 */,
-			Fragments._HardkeyType__Enumeration /* 8 */,
-			Fragments._HardkeyType__HardkeyType /* 9 */
+			Fragments._HardkeyType__OclEnumeration /* 3 */,
+			Fragments._HardkeyType__HardkeyType /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __HardkeyType = { 1,1,3,1,2,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __HardkeyType = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _InputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _InputDevice =
 		{
 			Fragments._InputDevice__OclAny /* 0 */,
 			Fragments._InputDevice__OclElement /* 1 */,
@@ -936,46 +843,37 @@ public class PlatformTables
 			Fragments._InputDevice__InteractionRessource /* 4 */,
 			Fragments._InputDevice__InputDevice /* 5 */
 		};
-		private static final /*@NonNull*/ int[] __InputDevice = { 1,1,2,1,1,1 };
+		private static final int /*@NonNull*/ [] __InputDevice = { 1,1,2,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _IntegerProperty =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _IntegerProperty =
 		{
 			Fragments._IntegerProperty__OclAny /* 0 */,
 			Fragments._IntegerProperty__OclElement /* 1 */,
 			Fragments._IntegerProperty__GenericProperty /* 2 */,
 			Fragments._IntegerProperty__IntegerProperty /* 3 */
 		};
-		private static final /*@NonNull*/ int[] __IntegerProperty = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __IntegerProperty = { 1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _InteractionModality =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _InteractionModality =
 		{
 			Fragments._InteractionModality__OclAny /* 0 */,
 			Fragments._InteractionModality__OclElement /* 1 */,
-			Fragments._InteractionModality__Nameable /* 2 */,
 			Fragments._InteractionModality__OclType /* 2 */,
-			Fragments._InteractionModality__Visitable /* 2 */,
-			Fragments._InteractionModality__Element /* 3 */,
-			Fragments._InteractionModality__NamedElement /* 4 */,
-			Fragments._InteractionModality__TemplateableElement /* 4 */,
-			Fragments._InteractionModality__Namespace /* 5 */,
-			Fragments._InteractionModality__Type /* 5 */,
-			Fragments._InteractionModality__Class /* 6 */,
-			Fragments._InteractionModality__DataType /* 7 */,
-			Fragments._InteractionModality__Enumeration /* 8 */,
-			Fragments._InteractionModality__InteractionModality /* 9 */
+			Fragments._InteractionModality__OclEnumeration /* 3 */,
+			Fragments._InteractionModality__InteractionModality /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __InteractionModality = { 1,1,3,1,2,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __InteractionModality = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _InteractionProperty =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _InteractionProperty =
 		{
 			Fragments._InteractionProperty__OclAny /* 0 */,
 			Fragments._InteractionProperty__OclElement /* 1 */,
 			Fragments._InteractionProperty__GenericProperty /* 2 */,
 			Fragments._InteractionProperty__InteractionProperty /* 3 */
 		};
-		private static final /*@NonNull*/ int[] __InteractionProperty = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __InteractionProperty = { 1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _InteractionRessource =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _InteractionRessource =
 		{
 			Fragments._InteractionRessource__OclAny /* 0 */,
 			Fragments._InteractionRessource__OclElement /* 1 */,
@@ -983,9 +881,9 @@ public class PlatformTables
 			Fragments._InteractionRessource__ElementaryRessource /* 3 */,
 			Fragments._InteractionRessource__InteractionRessource /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __InteractionRessource = { 1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __InteractionRessource = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Keyboard =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Keyboard =
 		{
 			Fragments._Keyboard__OclAny /* 0 */,
 			Fragments._Keyboard__OclElement /* 1 */,
@@ -993,28 +891,19 @@ public class PlatformTables
 			Fragments._Keyboard__ComplexRessource /* 3 */,
 			Fragments._Keyboard__Keyboard /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __Keyboard = { 1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Keyboard = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _KeyboardType =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _KeyboardType =
 		{
 			Fragments._KeyboardType__OclAny /* 0 */,
 			Fragments._KeyboardType__OclElement /* 1 */,
-			Fragments._KeyboardType__Nameable /* 2 */,
 			Fragments._KeyboardType__OclType /* 2 */,
-			Fragments._KeyboardType__Visitable /* 2 */,
-			Fragments._KeyboardType__Element /* 3 */,
-			Fragments._KeyboardType__NamedElement /* 4 */,
-			Fragments._KeyboardType__TemplateableElement /* 4 */,
-			Fragments._KeyboardType__Namespace /* 5 */,
-			Fragments._KeyboardType__Type /* 5 */,
-			Fragments._KeyboardType__Class /* 6 */,
-			Fragments._KeyboardType__DataType /* 7 */,
-			Fragments._KeyboardType__Enumeration /* 8 */,
-			Fragments._KeyboardType__KeyboardType /* 9 */
+			Fragments._KeyboardType__OclEnumeration /* 3 */,
+			Fragments._KeyboardType__KeyboardType /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __KeyboardType = { 1,1,3,1,2,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __KeyboardType = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _LightingDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _LightingDevice =
 		{
 			Fragments._LightingDevice__OclAny /* 0 */,
 			Fragments._LightingDevice__OclElement /* 1 */,
@@ -1025,9 +914,9 @@ public class PlatformTables
 			Fragments._LightingDevice__VisualOutputDevice /* 6 */,
 			Fragments._LightingDevice__LightingDevice /* 7 */
 		};
-		private static final /*@NonNull*/ int[] __LightingDevice = { 1,1,1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __LightingDevice = { 1,1,1,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Microphone =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Microphone =
 		{
 			Fragments._Microphone__OclAny /* 0 */,
 			Fragments._Microphone__OclElement /* 1 */,
@@ -1039,9 +928,9 @@ public class PlatformTables
 			Fragments._Microphone__AuditiveInputDevice /* 6 */,
 			Fragments._Microphone__Microphone /* 7 */
 		};
-		private static final /*@NonNull*/ int[] __Microphone = { 1,1,2,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Microphone = { 1,1,2,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Mouse =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Mouse =
 		{
 			Fragments._Mouse__OclAny /* 0 */,
 			Fragments._Mouse__OclElement /* 1 */,
@@ -1049,9 +938,9 @@ public class PlatformTables
 			Fragments._Mouse__ComplexRessource /* 3 */,
 			Fragments._Mouse__Mouse /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __Mouse = { 1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Mouse = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _OutputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _OutputDevice =
 		{
 			Fragments._OutputDevice__OclAny /* 0 */,
 			Fragments._OutputDevice__OclElement /* 1 */,
@@ -1060,44 +949,35 @@ public class PlatformTables
 			Fragments._OutputDevice__InteractionRessource /* 4 */,
 			Fragments._OutputDevice__OutputDevice /* 5 */
 		};
-		private static final /*@NonNull*/ int[] __OutputDevice = { 1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __OutputDevice = { 1,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _PMbase =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PMbase =
 		{
 			Fragments._PMbase__OclAny /* 0 */,
 			Fragments._PMbase__OclElement /* 1 */,
 			Fragments._PMbase__PMbase /* 2 */
 		};
-		private static final /*@NonNull*/ int[] __PMbase = { 1,1,1 };
+		private static final int /*@NonNull*/ [] __PMbase = { 1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Platform =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Platform =
 		{
 			Fragments._Platform__OclAny /* 0 */,
 			Fragments._Platform__OclElement /* 1 */,
 			Fragments._Platform__Platform /* 2 */
 		};
-		private static final /*@NonNull*/ int[] __Platform = { 1,1,1 };
+		private static final int /*@NonNull*/ [] __Platform = { 1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _PlatformType =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PlatformType =
 		{
 			Fragments._PlatformType__OclAny /* 0 */,
 			Fragments._PlatformType__OclElement /* 1 */,
-			Fragments._PlatformType__Nameable /* 2 */,
 			Fragments._PlatformType__OclType /* 2 */,
-			Fragments._PlatformType__Visitable /* 2 */,
-			Fragments._PlatformType__Element /* 3 */,
-			Fragments._PlatformType__NamedElement /* 4 */,
-			Fragments._PlatformType__TemplateableElement /* 4 */,
-			Fragments._PlatformType__Namespace /* 5 */,
-			Fragments._PlatformType__Type /* 5 */,
-			Fragments._PlatformType__Class /* 6 */,
-			Fragments._PlatformType__DataType /* 7 */,
-			Fragments._PlatformType__Enumeration /* 8 */,
-			Fragments._PlatformType__PlatformType /* 9 */
+			Fragments._PlatformType__OclEnumeration /* 3 */,
+			Fragments._PlatformType__PlatformType /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __PlatformType = { 1,1,3,1,2,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __PlatformType = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _PointingDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _PointingDevice =
 		{
 			Fragments._PointingDevice__OclAny /* 0 */,
 			Fragments._PointingDevice__OclElement /* 1 */,
@@ -1108,9 +988,9 @@ public class PlatformTables
 			Fragments._PointingDevice__InputDevice /* 5 */,
 			Fragments._PointingDevice__PointingDevice /* 6 */
 		};
-		private static final /*@NonNull*/ int[] __PointingDevice = { 1,1,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __PointingDevice = { 1,1,2,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _ProprioceptiveInputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ProprioceptiveInputDevice =
 		{
 			Fragments._ProprioceptiveInputDevice__OclAny /* 0 */,
 			Fragments._ProprioceptiveInputDevice__OclElement /* 1 */,
@@ -1121,9 +1001,9 @@ public class PlatformTables
 			Fragments._ProprioceptiveInputDevice__InputDevice /* 5 */,
 			Fragments._ProprioceptiveInputDevice__ProprioceptiveInputDevice /* 6 */
 		};
-		private static final /*@NonNull*/ int[] __ProprioceptiveInputDevice = { 1,1,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __ProprioceptiveInputDevice = { 1,1,2,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _ProprioceptiveOutputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _ProprioceptiveOutputDevice =
 		{
 			Fragments._ProprioceptiveOutputDevice__OclAny /* 0 */,
 			Fragments._ProprioceptiveOutputDevice__OclElement /* 1 */,
@@ -1133,55 +1013,37 @@ public class PlatformTables
 			Fragments._ProprioceptiveOutputDevice__OutputDevice /* 5 */,
 			Fragments._ProprioceptiveOutputDevice__ProprioceptiveOutputDevice /* 6 */
 		};
-		private static final /*@NonNull*/ int[] __ProprioceptiveOutputDevice = { 1,1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __ProprioceptiveOutputDevice = { 1,1,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Ressource =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Ressource =
 		{
 			Fragments._Ressource__OclAny /* 0 */,
 			Fragments._Ressource__OclElement /* 1 */,
 			Fragments._Ressource__Ressource /* 2 */
 		};
-		private static final /*@NonNull*/ int[] __Ressource = { 1,1,1 };
+		private static final int /*@NonNull*/ [] __Ressource = { 1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Sensibility =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Sensibility =
 		{
 			Fragments._Sensibility__OclAny /* 0 */,
 			Fragments._Sensibility__OclElement /* 1 */,
-			Fragments._Sensibility__Nameable /* 2 */,
 			Fragments._Sensibility__OclType /* 2 */,
-			Fragments._Sensibility__Visitable /* 2 */,
-			Fragments._Sensibility__Element /* 3 */,
-			Fragments._Sensibility__NamedElement /* 4 */,
-			Fragments._Sensibility__TemplateableElement /* 4 */,
-			Fragments._Sensibility__Namespace /* 5 */,
-			Fragments._Sensibility__Type /* 5 */,
-			Fragments._Sensibility__Class /* 6 */,
-			Fragments._Sensibility__DataType /* 7 */,
-			Fragments._Sensibility__Enumeration /* 8 */,
-			Fragments._Sensibility__Sensibility /* 9 */
+			Fragments._Sensibility__OclEnumeration /* 3 */,
+			Fragments._Sensibility__Sensibility /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __Sensibility = { 1,1,3,1,2,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Sensibility = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _SizeEvaluation =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _SizeEvaluation =
 		{
 			Fragments._SizeEvaluation__OclAny /* 0 */,
 			Fragments._SizeEvaluation__OclElement /* 1 */,
-			Fragments._SizeEvaluation__Nameable /* 2 */,
 			Fragments._SizeEvaluation__OclType /* 2 */,
-			Fragments._SizeEvaluation__Visitable /* 2 */,
-			Fragments._SizeEvaluation__Element /* 3 */,
-			Fragments._SizeEvaluation__NamedElement /* 4 */,
-			Fragments._SizeEvaluation__TemplateableElement /* 4 */,
-			Fragments._SizeEvaluation__Namespace /* 5 */,
-			Fragments._SizeEvaluation__Type /* 5 */,
-			Fragments._SizeEvaluation__Class /* 6 */,
-			Fragments._SizeEvaluation__DataType /* 7 */,
-			Fragments._SizeEvaluation__Enumeration /* 8 */,
-			Fragments._SizeEvaluation__SizeEvaluation /* 9 */
+			Fragments._SizeEvaluation__OclEnumeration /* 3 */,
+			Fragments._SizeEvaluation__SizeEvaluation /* 4 */
 		};
-		private static final /*@NonNull*/ int[] __SizeEvaluation = { 1,1,3,1,2,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __SizeEvaluation = { 1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Speaker =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Speaker =
 		{
 			Fragments._Speaker__OclAny /* 0 */,
 			Fragments._Speaker__OclElement /* 1 */,
@@ -1192,18 +1054,18 @@ public class PlatformTables
 			Fragments._Speaker__AuditiveOutputDevice /* 6 */,
 			Fragments._Speaker__Speaker /* 7 */
 		};
-		private static final /*@NonNull*/ int[] __Speaker = { 1,1,1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Speaker = { 1,1,1,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _StringProperty =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _StringProperty =
 		{
 			Fragments._StringProperty__OclAny /* 0 */,
 			Fragments._StringProperty__OclElement /* 1 */,
 			Fragments._StringProperty__GenericProperty /* 2 */,
 			Fragments._StringProperty__StringProperty /* 3 */
 		};
-		private static final /*@NonNull*/ int[] __StringProperty = { 1,1,1,1 };
+		private static final int /*@NonNull*/ [] __StringProperty = { 1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _TactileInputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TactileInputDevice =
 		{
 			Fragments._TactileInputDevice__OclAny /* 0 */,
 			Fragments._TactileInputDevice__OclElement /* 1 */,
@@ -1214,9 +1076,9 @@ public class PlatformTables
 			Fragments._TactileInputDevice__InputDevice /* 5 */,
 			Fragments._TactileInputDevice__TactileInputDevice /* 6 */
 		};
-		private static final /*@NonNull*/ int[] __TactileInputDevice = { 1,1,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __TactileInputDevice = { 1,1,2,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _TactileOutputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _TactileOutputDevice =
 		{
 			Fragments._TactileOutputDevice__OclAny /* 0 */,
 			Fragments._TactileOutputDevice__OclElement /* 1 */,
@@ -1226,9 +1088,9 @@ public class PlatformTables
 			Fragments._TactileOutputDevice__OutputDevice /* 5 */,
 			Fragments._TactileOutputDevice__TactileOutputDevice /* 6 */
 		};
-		private static final /*@NonNull*/ int[] __TactileOutputDevice = { 1,1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __TactileOutputDevice = { 1,1,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _Touchscreen =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _Touchscreen =
 		{
 			Fragments._Touchscreen__OclAny /* 0 */,
 			Fragments._Touchscreen__OclElement /* 1 */,
@@ -1240,9 +1102,9 @@ public class PlatformTables
 			Fragments._Touchscreen__TactileInputDevice /* 6 */,
 			Fragments._Touchscreen__Touchscreen /* 7 */
 		};
-		private static final /*@NonNull*/ int[] __Touchscreen = { 1,1,2,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __Touchscreen = { 1,1,2,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _VibrationMotor =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _VibrationMotor =
 		{
 			Fragments._VibrationMotor__OclAny /* 0 */,
 			Fragments._VibrationMotor__OclElement /* 1 */,
@@ -1253,9 +1115,9 @@ public class PlatformTables
 			Fragments._VibrationMotor__TactileOutputDevice /* 6 */,
 			Fragments._VibrationMotor__VibrationMotor /* 7 */
 		};
-		private static final /*@NonNull*/ int[] __VibrationMotor = { 1,1,1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __VibrationMotor = { 1,1,1,1,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _VisualInputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _VisualInputDevice =
 		{
 			Fragments._VisualInputDevice__OclAny /* 0 */,
 			Fragments._VisualInputDevice__OclElement /* 1 */,
@@ -1266,9 +1128,9 @@ public class PlatformTables
 			Fragments._VisualInputDevice__InputDevice /* 5 */,
 			Fragments._VisualInputDevice__VisualInputDevice /* 6 */
 		};
-		private static final /*@NonNull*/ int[] __VisualInputDevice = { 1,1,2,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __VisualInputDevice = { 1,1,2,1,1,1,1 };
 
-		private static final /*@NonNull*/ ExecutorFragment[] _VisualOutputDevice =
+		private static final /*@NonNull*/ ExecutorFragment /*@NonNull*/ [] _VisualOutputDevice =
 		{
 			Fragments._VisualOutputDevice__OclAny /* 0 */,
 			Fragments._VisualOutputDevice__OclElement /* 1 */,
@@ -1278,7 +1140,7 @@ public class PlatformTables
 			Fragments._VisualOutputDevice__OutputDevice /* 5 */,
 			Fragments._VisualOutputDevice__VisualOutputDevice /* 6 */
 		};
-		private static final /*@NonNull*/ int[] __VisualOutputDevice = { 1,1,1,1,1,1,1 };
+		private static final int /*@NonNull*/ [] __VisualOutputDevice = { 1,1,1,1,1,1,1 };
 
 		/**
 		 *	Install the fragment descriptors in the class descriptors.
@@ -1345,12 +1207,12 @@ public class PlatformTables
 			TypeFragments.init();
 		}
 
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveInputDevice__AuditiveInputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveInputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveInputDevice__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveInputDevice__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveInputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveInputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveInputDevice__AuditiveInputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveInputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveInputDevice__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveInputDevice__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveInputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveInputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1364,19 +1226,24 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveInputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveInputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveInputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveInputDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveOutputDevice__AuditiveOutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveOutputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveOutputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveOutputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveOutputDevice__AuditiveOutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveOutputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveOutputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveOutputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1390,19 +1257,24 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveOutputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveOutputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveOutputDevice__OutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _AuditiveOutputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveOutputDevice__OutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _AuditiveOutputDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _BooleanProperty__BooleanProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _BooleanProperty__GenericProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _BooleanProperty__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _BooleanProperty__BooleanProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _BooleanProperty__GenericProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _BooleanProperty__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1416,20 +1288,25 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _BooleanProperty__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _BooleanProperty__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Camera__Camera = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Camera__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Camera__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Camera__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Camera__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Camera__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Camera__Camera = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Camera__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Camera__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Camera__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Camera__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Camera__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1443,18 +1320,23 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Camera__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Camera__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Camera__Ressource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Camera__VisualInputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Camera__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Camera__VisualInputDevice = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _ComplexRessource__ComplexRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ComplexRessource__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ComplexRessource__ComplexRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ComplexRessource__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1468,19 +1350,24 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ComplexRessource__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ComplexRessource__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ComplexRessource__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ComplexRessource__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Display__Display = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Display__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Display__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Display__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Display__Display = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Display__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Display__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Display__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1494,19 +1381,24 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Display__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Display__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Display__OutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Display__Ressource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Display__VisualOutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Display__OutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Display__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Display__VisualOutputDevice = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryRessource__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryRessource__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryRessource__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryRessource__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1520,29 +1412,22 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryRessource__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryRessource__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryRessource__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryRessource__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__ElementaryTaskEvaluation = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__Class = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__DataType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__Element = {
-			PivotTables.Operations._Element__allOwnedElements /* allOwnedElements() */,
-			PivotTables.Operations._Element__getValue /* getValue(Type[1],String[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__Enumeration = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__Nameable = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__NamedElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__Namespace = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryTaskEvaluation__ElementaryTaskEvaluation = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryTaskEvaluation__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1556,28 +1441,27 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__OclElement = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */,
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryTaskEvaluation__OclElement = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__OclType = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryTaskEvaluation__OclEnumeration = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryTaskEvaluation__OclType = {
 			OCLstdlibTables.Operations._OclType__conformsTo /* conformsTo(OclType[?]) */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__TemplateableElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__Type = {
-			PivotTables.Operations._Type__conformsTo /* conformsTo(Type[?]) */,
-			PivotTables.Operations._Type__flattenedType /* flattenedType() */,
-			PivotTables.Operations._Type__isClass /* isClass() */,
-			PivotTables.Operations._Type__isTemplateParameter /* isTemplateParameter() */,
-			PivotTables.Operations._Type__specializeIn /* specializeIn(CallExp[1],Type[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTaskEvaluation__Visitable = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTasksForInputDevices__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTasksForInputDevices__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryTasksForInputDevices__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryTasksForInputDevices__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1591,17 +1475,22 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ElementaryTasksForInputDevices__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ElementaryTasksForInputDevices__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _FloatProperty__FloatProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _FloatProperty__GenericProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _FloatProperty__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _FloatProperty__FloatProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _FloatProperty__GenericProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _FloatProperty__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1615,17 +1504,22 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _FloatProperty__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _FloatProperty__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _GenericComplexRessource__GenericComplexRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _GenericComplexRessource__ComplexRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _GenericComplexRessource__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _GenericComplexRessource__GenericComplexRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _GenericComplexRessource__ComplexRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _GenericComplexRessource__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1639,17 +1533,22 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _GenericComplexRessource__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _GenericComplexRessource__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _GenericComplexRessource__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _GenericComplexRessource__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _GenericProperty__GenericProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _GenericProperty__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _GenericProperty__GenericProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _GenericProperty__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1663,20 +1562,25 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _GenericProperty__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _GenericProperty__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Hardkey__Hardkey = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Hardkey__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Hardkey__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Hardkey__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Hardkey__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Hardkey__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Hardkey__Hardkey = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Hardkey__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Hardkey__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Hardkey__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Hardkey__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Hardkey__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1690,30 +1594,23 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Hardkey__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Hardkey__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Hardkey__Ressource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Hardkey__TactileInputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Hardkey__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Hardkey__TactileInputDevice = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__HardkeyType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__Class = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__DataType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__Element = {
-			PivotTables.Operations._Element__allOwnedElements /* allOwnedElements() */,
-			PivotTables.Operations._Element__getValue /* getValue(Type[1],String[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__Enumeration = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__Nameable = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__NamedElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__Namespace = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _HardkeyType__HardkeyType = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _HardkeyType__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1727,31 +1624,30 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__OclElement = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */,
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _HardkeyType__OclElement = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__OclType = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _HardkeyType__OclEnumeration = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _HardkeyType__OclType = {
 			OCLstdlibTables.Operations._OclType__conformsTo /* conformsTo(OclType[?]) */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__TemplateableElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__Type = {
-			PivotTables.Operations._Type__conformsTo /* conformsTo(Type[?]) */,
-			PivotTables.Operations._Type__flattenedType /* flattenedType() */,
-			PivotTables.Operations._Type__isClass /* isClass() */,
-			PivotTables.Operations._Type__isTemplateParameter /* isTemplateParameter() */,
-			PivotTables.Operations._Type__specializeIn /* specializeIn(CallExp[1],Type[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _HardkeyType__Visitable = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _InputDevice__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InputDevice__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InputDevice__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InputDevice__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1765,18 +1661,23 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InputDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _IntegerProperty__IntegerProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _IntegerProperty__GenericProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _IntegerProperty__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _IntegerProperty__IntegerProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _IntegerProperty__GenericProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _IntegerProperty__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1790,28 +1691,21 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _IntegerProperty__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _IntegerProperty__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__InteractionModality = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__Class = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__DataType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__Element = {
-			PivotTables.Operations._Element__allOwnedElements /* allOwnedElements() */,
-			PivotTables.Operations._Element__getValue /* getValue(Type[1],String[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__Enumeration = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__Nameable = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__NamedElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__Namespace = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionModality__InteractionModality = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionModality__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1825,29 +1719,28 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__OclElement = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */,
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionModality__OclElement = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__OclType = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionModality__OclEnumeration = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionModality__OclType = {
 			OCLstdlibTables.Operations._OclType__conformsTo /* conformsTo(OclType[?]) */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__TemplateableElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__Type = {
-			PivotTables.Operations._Type__conformsTo /* conformsTo(Type[?]) */,
-			PivotTables.Operations._Type__flattenedType /* flattenedType() */,
-			PivotTables.Operations._Type__isClass /* isClass() */,
-			PivotTables.Operations._Type__isTemplateParameter /* isTemplateParameter() */,
-			PivotTables.Operations._Type__specializeIn /* specializeIn(CallExp[1],Type[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionModality__Visitable = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionProperty__InteractionProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionProperty__GenericProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionProperty__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionProperty__InteractionProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionProperty__GenericProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionProperty__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1861,17 +1754,22 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionProperty__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionProperty__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionRessource__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionRessource__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionRessource__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionRessource__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionRessource__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionRessource__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1885,18 +1783,23 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionRessource__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionRessource__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _InteractionRessource__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _InteractionRessource__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Keyboard__Keyboard = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Keyboard__ComplexRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Keyboard__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Keyboard__Keyboard = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Keyboard__ComplexRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Keyboard__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1910,29 +1813,22 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Keyboard__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Keyboard__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Keyboard__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Keyboard__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__KeyboardType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__Class = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__DataType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__Element = {
-			PivotTables.Operations._Element__allOwnedElements /* allOwnedElements() */,
-			PivotTables.Operations._Element__getValue /* getValue(Type[1],String[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__Enumeration = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__Nameable = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__NamedElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__Namespace = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _KeyboardType__KeyboardType = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _KeyboardType__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1946,30 +1842,29 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__OclElement = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */,
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _KeyboardType__OclElement = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__OclType = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _KeyboardType__OclEnumeration = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _KeyboardType__OclType = {
 			OCLstdlibTables.Operations._OclType__conformsTo /* conformsTo(OclType[?]) */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__TemplateableElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__Type = {
-			PivotTables.Operations._Type__conformsTo /* conformsTo(Type[?]) */,
-			PivotTables.Operations._Type__flattenedType /* flattenedType() */,
-			PivotTables.Operations._Type__isClass /* isClass() */,
-			PivotTables.Operations._Type__isTemplateParameter /* isTemplateParameter() */,
-			PivotTables.Operations._Type__specializeIn /* specializeIn(CallExp[1],Type[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _KeyboardType__Visitable = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _LightingDevice__LightingDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _LightingDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _LightingDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _LightingDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _LightingDevice__LightingDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _LightingDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _LightingDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _LightingDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -1983,24 +1878,29 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _LightingDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _LightingDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _LightingDevice__OutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _LightingDevice__Ressource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _LightingDevice__VisualOutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _LightingDevice__OutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _LightingDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _LightingDevice__VisualOutputDevice = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Microphone__Microphone = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Microphone__AuditiveInputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Microphone__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Microphone__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Microphone__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Microphone__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Microphone__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Microphone__Microphone = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Microphone__AuditiveInputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Microphone__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Microphone__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Microphone__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Microphone__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Microphone__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2014,18 +1914,23 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Microphone__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Microphone__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Microphone__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Microphone__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Mouse__Mouse = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Mouse__ComplexRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Mouse__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Mouse__Mouse = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Mouse__ComplexRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Mouse__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2039,19 +1944,24 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Mouse__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Mouse__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Mouse__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Mouse__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _OutputDevice__OutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _OutputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _OutputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _OutputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _OutputDevice__OutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _OutputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _OutputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _OutputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2065,17 +1975,22 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _OutputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _OutputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _OutputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _OutputDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _PMbase__PMbase = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PMbase__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PMbase__PMbase = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PMbase__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2089,16 +2004,21 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _PMbase__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PMbase__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Platform__Platform = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Platform__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Platform__Platform = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Platform__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2112,28 +2032,21 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Platform__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Platform__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__PlatformType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__Class = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__DataType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__Element = {
-			PivotTables.Operations._Element__allOwnedElements /* allOwnedElements() */,
-			PivotTables.Operations._Element__getValue /* getValue(Type[1],String[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__Enumeration = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__Nameable = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__NamedElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__Namespace = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PlatformType__PlatformType = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PlatformType__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2147,32 +2060,31 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__OclElement = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */,
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PlatformType__OclElement = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__OclType = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PlatformType__OclEnumeration = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PlatformType__OclType = {
 			OCLstdlibTables.Operations._OclType__conformsTo /* conformsTo(OclType[?]) */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__TemplateableElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__Type = {
-			PivotTables.Operations._Type__conformsTo /* conformsTo(Type[?]) */,
-			PivotTables.Operations._Type__flattenedType /* flattenedType() */,
-			PivotTables.Operations._Type__isClass /* isClass() */,
-			PivotTables.Operations._Type__isTemplateParameter /* isTemplateParameter() */,
-			PivotTables.Operations._Type__specializeIn /* specializeIn(CallExp[1],Type[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _PlatformType__Visitable = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _PointingDevice__PointingDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PointingDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PointingDevice__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PointingDevice__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PointingDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _PointingDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PointingDevice__PointingDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PointingDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PointingDevice__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PointingDevice__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PointingDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PointingDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2186,21 +2098,26 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _PointingDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PointingDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _PointingDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _PointingDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveInputDevice__ProprioceptiveInputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveInputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveInputDevice__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveInputDevice__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveInputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveInputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveInputDevice__ProprioceptiveInputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveInputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveInputDevice__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveInputDevice__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveInputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveInputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2214,19 +2131,24 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveInputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveInputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveInputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveInputDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveOutputDevice__ProprioceptiveOutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveOutputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveOutputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveOutputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveOutputDevice__ProprioceptiveOutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveOutputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveOutputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveOutputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2240,18 +2162,23 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveOutputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveOutputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveOutputDevice__OutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _ProprioceptiveOutputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveOutputDevice__OutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _ProprioceptiveOutputDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Ressource__Ressource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Ressource__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Ressource__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Ressource__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2265,28 +2192,21 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Ressource__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Ressource__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__Sensibility = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__Class = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__DataType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__Element = {
-			PivotTables.Operations._Element__allOwnedElements /* allOwnedElements() */,
-			PivotTables.Operations._Element__getValue /* getValue(Type[1],String[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__Enumeration = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__Nameable = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__NamedElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__Namespace = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Sensibility__Sensibility = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Sensibility__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2300,40 +2220,27 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__OclElement = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */,
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Sensibility__OclElement = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__OclType = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Sensibility__OclEnumeration = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Sensibility__OclType = {
 			OCLstdlibTables.Operations._OclType__conformsTo /* conformsTo(OclType[?]) */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__TemplateableElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__Type = {
-			PivotTables.Operations._Type__conformsTo /* conformsTo(Type[?]) */,
-			PivotTables.Operations._Type__flattenedType /* flattenedType() */,
-			PivotTables.Operations._Type__isClass /* isClass() */,
-			PivotTables.Operations._Type__isTemplateParameter /* isTemplateParameter() */,
-			PivotTables.Operations._Type__specializeIn /* specializeIn(CallExp[1],Type[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Sensibility__Visitable = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__SizeEvaluation = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__Class = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__DataType = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__Element = {
-			PivotTables.Operations._Element__allOwnedElements /* allOwnedElements() */,
-			PivotTables.Operations._Element__getValue /* getValue(Type[1],String[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__Enumeration = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__Nameable = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__NamedElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__Namespace = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _SizeEvaluation__SizeEvaluation = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _SizeEvaluation__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2347,31 +2254,30 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__OclElement = {
-			PivotTables.Operations._Enumeration__allInstances /* allInstances() */,
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _SizeEvaluation__OclElement = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__OclType = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _SizeEvaluation__OclEnumeration = {
+			OCLstdlibTables.Operations._OclEnumeration__allInstances /* allInstances() */
+		};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _SizeEvaluation__OclType = {
 			OCLstdlibTables.Operations._OclType__conformsTo /* conformsTo(OclType[?]) */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__TemplateableElement = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__Type = {
-			PivotTables.Operations._Type__conformsTo /* conformsTo(Type[?]) */,
-			PivotTables.Operations._Type__flattenedType /* flattenedType() */,
-			PivotTables.Operations._Type__isClass /* isClass() */,
-			PivotTables.Operations._Type__isTemplateParameter /* isTemplateParameter() */,
-			PivotTables.Operations._Type__specializeIn /* specializeIn(CallExp[1],Type[1]) */
-		};
-		private static final /*@NonNull*/ ExecutorOperation[] _SizeEvaluation__Visitable = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Speaker__Speaker = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Speaker__AuditiveOutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Speaker__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Speaker__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Speaker__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Speaker__Speaker = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Speaker__AuditiveOutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Speaker__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Speaker__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Speaker__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2385,19 +2291,24 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Speaker__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Speaker__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Speaker__OutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Speaker__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Speaker__OutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Speaker__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _StringProperty__StringProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _StringProperty__GenericProperty = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _StringProperty__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _StringProperty__StringProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _StringProperty__GenericProperty = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _StringProperty__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2411,20 +2322,25 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _StringProperty__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _StringProperty__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileInputDevice__TactileInputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileInputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileInputDevice__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileInputDevice__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileInputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileInputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileInputDevice__TactileInputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileInputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileInputDevice__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileInputDevice__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileInputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileInputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2438,19 +2354,24 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileInputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileInputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileInputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileInputDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileOutputDevice__TactileOutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileOutputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileOutputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileOutputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileOutputDevice__TactileOutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileOutputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileOutputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileOutputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2464,22 +2385,27 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileOutputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileOutputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileOutputDevice__OutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _TactileOutputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileOutputDevice__OutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _TactileOutputDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _Touchscreen__Touchscreen = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Touchscreen__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Touchscreen__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Touchscreen__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Touchscreen__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Touchscreen__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Touchscreen__Touchscreen = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Touchscreen__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Touchscreen__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Touchscreen__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Touchscreen__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Touchscreen__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2493,20 +2419,25 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Touchscreen__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Touchscreen__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _Touchscreen__Ressource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _Touchscreen__TactileInputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Touchscreen__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _Touchscreen__TactileInputDevice = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _VibrationMotor__VibrationMotor = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VibrationMotor__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VibrationMotor__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VibrationMotor__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VibrationMotor__VibrationMotor = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VibrationMotor__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VibrationMotor__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VibrationMotor__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2520,23 +2451,28 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _VibrationMotor__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VibrationMotor__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _VibrationMotor__OutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VibrationMotor__Ressource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VibrationMotor__TactileOutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VibrationMotor__OutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VibrationMotor__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VibrationMotor__TactileOutputDevice = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualInputDevice__VisualInputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualInputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualInputDevice__ElementaryTasksForInputDevices = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualInputDevice__InputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualInputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualInputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualInputDevice__VisualInputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualInputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualInputDevice__ElementaryTasksForInputDevices = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualInputDevice__InputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualInputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualInputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2550,19 +2486,24 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualInputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualInputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualInputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualInputDevice__Ressource = {};
 
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualOutputDevice__VisualOutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualOutputDevice__ElementaryRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualOutputDevice__InteractionRessource = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualOutputDevice__OclAny = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualOutputDevice__VisualOutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualOutputDevice__ElementaryRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualOutputDevice__InteractionRessource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualOutputDevice__OclAny = {
 			OCLstdlibTables.Operations._OclAny___lt__gt_ /* _'<>'(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny___eq_ /* _'='(OclSelf[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclAsSet /* oclAsSet() */,
@@ -2576,15 +2517,20 @@ public class PlatformTables
 			OCLstdlibTables.Operations._OclAny__0_oclLog /* oclLog() */,
 			OCLstdlibTables.Operations._OclAny__1_oclLog /* oclLog(String[?]) */,
 			OCLstdlibTables.Operations._OclAny__oclType /* oclType() */,
+			OCLstdlibTables.Operations._OclAny__oclTypes /* oclTypes() */,
 			OCLstdlibTables.Operations._OclAny__toString /* toString() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualOutputDevice__OclElement = {
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualOutputDevice__OclElement = {
 			OCLstdlibTables.Operations._OclElement__allInstances /* allInstances() */,
+			OCLstdlibTables.Operations._OclElement__oclAsModelType /* oclAsModelType(TT)(TT[?]) */,
 			OCLstdlibTables.Operations._OclElement__oclContainer /* oclContainer() */,
-			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */
+			OCLstdlibTables.Operations._OclElement__oclContents /* oclContents() */,
+			OCLstdlibTables.Operations._OclElement__oclIsModelKindOf /* oclIsModelKindOf(OclType[?]) */,
+			OCLstdlibTables.Operations._OclElement__oclModelType /* oclModelType() */,
+			OCLstdlibTables.Operations._OclElement__oclModelTypes /* oclModelTypes() */
 		};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualOutputDevice__OutputDevice = {};
-		private static final /*@NonNull*/ ExecutorOperation[] _VisualOutputDevice__Ressource = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualOutputDevice__OutputDevice = {};
+		private static final /*@NonNull*/ ExecutorOperation /*@NonNull*/ [] _VisualOutputDevice__Ressource = {};
 
 		/*
 		 *	Install the operation descriptors in the fragment descriptors.
@@ -2641,20 +2587,11 @@ public class PlatformTables
 			Fragments._ElementaryRessource__OclElement.initOperations(_ElementaryRessource__OclElement);
 			Fragments._ElementaryRessource__Ressource.initOperations(_ElementaryRessource__Ressource);
 
-			Fragments._ElementaryTaskEvaluation__Class.initOperations(_ElementaryTaskEvaluation__Class);
-			Fragments._ElementaryTaskEvaluation__DataType.initOperations(_ElementaryTaskEvaluation__DataType);
-			Fragments._ElementaryTaskEvaluation__Element.initOperations(_ElementaryTaskEvaluation__Element);
 			Fragments._ElementaryTaskEvaluation__ElementaryTaskEvaluation.initOperations(_ElementaryTaskEvaluation__ElementaryTaskEvaluation);
-			Fragments._ElementaryTaskEvaluation__Enumeration.initOperations(_ElementaryTaskEvaluation__Enumeration);
-			Fragments._ElementaryTaskEvaluation__Nameable.initOperations(_ElementaryTaskEvaluation__Nameable);
-			Fragments._ElementaryTaskEvaluation__NamedElement.initOperations(_ElementaryTaskEvaluation__NamedElement);
-			Fragments._ElementaryTaskEvaluation__Namespace.initOperations(_ElementaryTaskEvaluation__Namespace);
 			Fragments._ElementaryTaskEvaluation__OclAny.initOperations(_ElementaryTaskEvaluation__OclAny);
 			Fragments._ElementaryTaskEvaluation__OclElement.initOperations(_ElementaryTaskEvaluation__OclElement);
+			Fragments._ElementaryTaskEvaluation__OclEnumeration.initOperations(_ElementaryTaskEvaluation__OclEnumeration);
 			Fragments._ElementaryTaskEvaluation__OclType.initOperations(_ElementaryTaskEvaluation__OclType);
-			Fragments._ElementaryTaskEvaluation__TemplateableElement.initOperations(_ElementaryTaskEvaluation__TemplateableElement);
-			Fragments._ElementaryTaskEvaluation__Type.initOperations(_ElementaryTaskEvaluation__Type);
-			Fragments._ElementaryTaskEvaluation__Visitable.initOperations(_ElementaryTaskEvaluation__Visitable);
 
 			Fragments._ElementaryTasksForInputDevices__ElementaryTasksForInputDevices.initOperations(_ElementaryTasksForInputDevices__ElementaryTasksForInputDevices);
 			Fragments._ElementaryTasksForInputDevices__OclAny.initOperations(_ElementaryTasksForInputDevices__OclAny);
@@ -2685,20 +2622,11 @@ public class PlatformTables
 			Fragments._Hardkey__Ressource.initOperations(_Hardkey__Ressource);
 			Fragments._Hardkey__TactileInputDevice.initOperations(_Hardkey__TactileInputDevice);
 
-			Fragments._HardkeyType__Class.initOperations(_HardkeyType__Class);
-			Fragments._HardkeyType__DataType.initOperations(_HardkeyType__DataType);
-			Fragments._HardkeyType__Element.initOperations(_HardkeyType__Element);
-			Fragments._HardkeyType__Enumeration.initOperations(_HardkeyType__Enumeration);
 			Fragments._HardkeyType__HardkeyType.initOperations(_HardkeyType__HardkeyType);
-			Fragments._HardkeyType__Nameable.initOperations(_HardkeyType__Nameable);
-			Fragments._HardkeyType__NamedElement.initOperations(_HardkeyType__NamedElement);
-			Fragments._HardkeyType__Namespace.initOperations(_HardkeyType__Namespace);
 			Fragments._HardkeyType__OclAny.initOperations(_HardkeyType__OclAny);
 			Fragments._HardkeyType__OclElement.initOperations(_HardkeyType__OclElement);
+			Fragments._HardkeyType__OclEnumeration.initOperations(_HardkeyType__OclEnumeration);
 			Fragments._HardkeyType__OclType.initOperations(_HardkeyType__OclType);
-			Fragments._HardkeyType__TemplateableElement.initOperations(_HardkeyType__TemplateableElement);
-			Fragments._HardkeyType__Type.initOperations(_HardkeyType__Type);
-			Fragments._HardkeyType__Visitable.initOperations(_HardkeyType__Visitable);
 
 			Fragments._InputDevice__ElementaryRessource.initOperations(_InputDevice__ElementaryRessource);
 			Fragments._InputDevice__ElementaryTasksForInputDevices.initOperations(_InputDevice__ElementaryTasksForInputDevices);
@@ -2713,20 +2641,11 @@ public class PlatformTables
 			Fragments._IntegerProperty__OclAny.initOperations(_IntegerProperty__OclAny);
 			Fragments._IntegerProperty__OclElement.initOperations(_IntegerProperty__OclElement);
 
-			Fragments._InteractionModality__Class.initOperations(_InteractionModality__Class);
-			Fragments._InteractionModality__DataType.initOperations(_InteractionModality__DataType);
-			Fragments._InteractionModality__Element.initOperations(_InteractionModality__Element);
-			Fragments._InteractionModality__Enumeration.initOperations(_InteractionModality__Enumeration);
 			Fragments._InteractionModality__InteractionModality.initOperations(_InteractionModality__InteractionModality);
-			Fragments._InteractionModality__Nameable.initOperations(_InteractionModality__Nameable);
-			Fragments._InteractionModality__NamedElement.initOperations(_InteractionModality__NamedElement);
-			Fragments._InteractionModality__Namespace.initOperations(_InteractionModality__Namespace);
 			Fragments._InteractionModality__OclAny.initOperations(_InteractionModality__OclAny);
 			Fragments._InteractionModality__OclElement.initOperations(_InteractionModality__OclElement);
+			Fragments._InteractionModality__OclEnumeration.initOperations(_InteractionModality__OclEnumeration);
 			Fragments._InteractionModality__OclType.initOperations(_InteractionModality__OclType);
-			Fragments._InteractionModality__TemplateableElement.initOperations(_InteractionModality__TemplateableElement);
-			Fragments._InteractionModality__Type.initOperations(_InteractionModality__Type);
-			Fragments._InteractionModality__Visitable.initOperations(_InteractionModality__Visitable);
 
 			Fragments._InteractionProperty__GenericProperty.initOperations(_InteractionProperty__GenericProperty);
 			Fragments._InteractionProperty__InteractionProperty.initOperations(_InteractionProperty__InteractionProperty);
@@ -2745,20 +2664,11 @@ public class PlatformTables
 			Fragments._Keyboard__OclElement.initOperations(_Keyboard__OclElement);
 			Fragments._Keyboard__Ressource.initOperations(_Keyboard__Ressource);
 
-			Fragments._KeyboardType__Class.initOperations(_KeyboardType__Class);
-			Fragments._KeyboardType__DataType.initOperations(_KeyboardType__DataType);
-			Fragments._KeyboardType__Element.initOperations(_KeyboardType__Element);
-			Fragments._KeyboardType__Enumeration.initOperations(_KeyboardType__Enumeration);
 			Fragments._KeyboardType__KeyboardType.initOperations(_KeyboardType__KeyboardType);
-			Fragments._KeyboardType__Nameable.initOperations(_KeyboardType__Nameable);
-			Fragments._KeyboardType__NamedElement.initOperations(_KeyboardType__NamedElement);
-			Fragments._KeyboardType__Namespace.initOperations(_KeyboardType__Namespace);
 			Fragments._KeyboardType__OclAny.initOperations(_KeyboardType__OclAny);
 			Fragments._KeyboardType__OclElement.initOperations(_KeyboardType__OclElement);
+			Fragments._KeyboardType__OclEnumeration.initOperations(_KeyboardType__OclEnumeration);
 			Fragments._KeyboardType__OclType.initOperations(_KeyboardType__OclType);
-			Fragments._KeyboardType__TemplateableElement.initOperations(_KeyboardType__TemplateableElement);
-			Fragments._KeyboardType__Type.initOperations(_KeyboardType__Type);
-			Fragments._KeyboardType__Visitable.initOperations(_KeyboardType__Visitable);
 
 			Fragments._LightingDevice__ElementaryRessource.initOperations(_LightingDevice__ElementaryRessource);
 			Fragments._LightingDevice__InteractionRessource.initOperations(_LightingDevice__InteractionRessource);
@@ -2800,20 +2710,11 @@ public class PlatformTables
 			Fragments._Platform__OclElement.initOperations(_Platform__OclElement);
 			Fragments._Platform__Platform.initOperations(_Platform__Platform);
 
-			Fragments._PlatformType__Class.initOperations(_PlatformType__Class);
-			Fragments._PlatformType__DataType.initOperations(_PlatformType__DataType);
-			Fragments._PlatformType__Element.initOperations(_PlatformType__Element);
-			Fragments._PlatformType__Enumeration.initOperations(_PlatformType__Enumeration);
-			Fragments._PlatformType__Nameable.initOperations(_PlatformType__Nameable);
-			Fragments._PlatformType__NamedElement.initOperations(_PlatformType__NamedElement);
-			Fragments._PlatformType__Namespace.initOperations(_PlatformType__Namespace);
 			Fragments._PlatformType__OclAny.initOperations(_PlatformType__OclAny);
 			Fragments._PlatformType__OclElement.initOperations(_PlatformType__OclElement);
+			Fragments._PlatformType__OclEnumeration.initOperations(_PlatformType__OclEnumeration);
 			Fragments._PlatformType__OclType.initOperations(_PlatformType__OclType);
 			Fragments._PlatformType__PlatformType.initOperations(_PlatformType__PlatformType);
-			Fragments._PlatformType__TemplateableElement.initOperations(_PlatformType__TemplateableElement);
-			Fragments._PlatformType__Type.initOperations(_PlatformType__Type);
-			Fragments._PlatformType__Visitable.initOperations(_PlatformType__Visitable);
 
 			Fragments._PointingDevice__ElementaryRessource.initOperations(_PointingDevice__ElementaryRessource);
 			Fragments._PointingDevice__ElementaryTasksForInputDevices.initOperations(_PointingDevice__ElementaryTasksForInputDevices);
@@ -2845,35 +2746,17 @@ public class PlatformTables
 			Fragments._Ressource__OclElement.initOperations(_Ressource__OclElement);
 			Fragments._Ressource__Ressource.initOperations(_Ressource__Ressource);
 
-			Fragments._Sensibility__Class.initOperations(_Sensibility__Class);
-			Fragments._Sensibility__DataType.initOperations(_Sensibility__DataType);
-			Fragments._Sensibility__Element.initOperations(_Sensibility__Element);
-			Fragments._Sensibility__Enumeration.initOperations(_Sensibility__Enumeration);
-			Fragments._Sensibility__Nameable.initOperations(_Sensibility__Nameable);
-			Fragments._Sensibility__NamedElement.initOperations(_Sensibility__NamedElement);
-			Fragments._Sensibility__Namespace.initOperations(_Sensibility__Namespace);
 			Fragments._Sensibility__OclAny.initOperations(_Sensibility__OclAny);
 			Fragments._Sensibility__OclElement.initOperations(_Sensibility__OclElement);
+			Fragments._Sensibility__OclEnumeration.initOperations(_Sensibility__OclEnumeration);
 			Fragments._Sensibility__OclType.initOperations(_Sensibility__OclType);
 			Fragments._Sensibility__Sensibility.initOperations(_Sensibility__Sensibility);
-			Fragments._Sensibility__TemplateableElement.initOperations(_Sensibility__TemplateableElement);
-			Fragments._Sensibility__Type.initOperations(_Sensibility__Type);
-			Fragments._Sensibility__Visitable.initOperations(_Sensibility__Visitable);
 
-			Fragments._SizeEvaluation__Class.initOperations(_SizeEvaluation__Class);
-			Fragments._SizeEvaluation__DataType.initOperations(_SizeEvaluation__DataType);
-			Fragments._SizeEvaluation__Element.initOperations(_SizeEvaluation__Element);
-			Fragments._SizeEvaluation__Enumeration.initOperations(_SizeEvaluation__Enumeration);
-			Fragments._SizeEvaluation__Nameable.initOperations(_SizeEvaluation__Nameable);
-			Fragments._SizeEvaluation__NamedElement.initOperations(_SizeEvaluation__NamedElement);
-			Fragments._SizeEvaluation__Namespace.initOperations(_SizeEvaluation__Namespace);
 			Fragments._SizeEvaluation__OclAny.initOperations(_SizeEvaluation__OclAny);
 			Fragments._SizeEvaluation__OclElement.initOperations(_SizeEvaluation__OclElement);
+			Fragments._SizeEvaluation__OclEnumeration.initOperations(_SizeEvaluation__OclEnumeration);
 			Fragments._SizeEvaluation__OclType.initOperations(_SizeEvaluation__OclType);
 			Fragments._SizeEvaluation__SizeEvaluation.initOperations(_SizeEvaluation__SizeEvaluation);
-			Fragments._SizeEvaluation__TemplateableElement.initOperations(_SizeEvaluation__TemplateableElement);
-			Fragments._SizeEvaluation__Type.initOperations(_SizeEvaluation__Type);
-			Fragments._SizeEvaluation__Visitable.initOperations(_SizeEvaluation__Visitable);
 
 			Fragments._Speaker__AuditiveOutputDevice.initOperations(_Speaker__AuditiveOutputDevice);
 			Fragments._Speaker__ElementaryRessource.initOperations(_Speaker__ElementaryRessource);
@@ -2960,7 +2843,7 @@ public class PlatformTables
 			FragmentOperations.init();
 		}
 
-		private static final /*@NonNull*/ ExecutorProperty[] _AuditiveInputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _AuditiveInputDevice = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__drawingCapable,
@@ -2977,7 +2860,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _AuditiveOutputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _AuditiveOutputDevice = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -2985,7 +2868,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _BooleanProperty = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _BooleanProperty = {
 			PlatformTables.Properties._BooleanProperty__booleanValue,
 			PlatformTables.Properties._GenericProperty__propertyName,
 			PlatformTables.Properties._GenericProperty__propertyUnit,
@@ -2993,7 +2876,7 @@ public class PlatformTables
 			PlatformTables.Properties._GenericProperty__Ressource__genericProperty
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Camera = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Camera = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__drawingCapable,
@@ -3010,7 +2893,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _ComplexRessource = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _ComplexRessource = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._ComplexRessource__subRessources,
@@ -3019,7 +2902,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Display = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Display = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Display__height,
 			PlatformTables.Properties._Display__isColorCapable,
@@ -3035,7 +2918,7 @@ public class PlatformTables
 			PlatformTables.Properties._Display__Touchscreen__correspondDisplay
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _ElementaryRessource = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _ElementaryRessource = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -3043,9 +2926,9 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _ElementaryTaskEvaluation = {};
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _ElementaryTaskEvaluation = {};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _ElementaryTasksForInputDevices = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _ElementaryTasksForInputDevices = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__drawingCapable,
@@ -3054,7 +2937,7 @@ public class PlatformTables
 			PlatformTables.Properties._ElementaryTasksForInputDevices__selectingCapable
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _FloatProperty = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _FloatProperty = {
 			PlatformTables.Properties._FloatProperty__floatValue,
 			PlatformTables.Properties._GenericProperty__propertyName,
 			PlatformTables.Properties._GenericProperty__propertyUnit,
@@ -3062,7 +2945,7 @@ public class PlatformTables
 			PlatformTables.Properties._GenericProperty__Ressource__genericProperty
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _GenericComplexRessource = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _GenericComplexRessource = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._ComplexRessource__subRessources,
@@ -3071,14 +2954,14 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _GenericProperty = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _GenericProperty = {
 			PlatformTables.Properties._GenericProperty__propertyName,
 			PlatformTables.Properties._GenericProperty__propertyUnit,
 			PlatformTables.Properties._GenericProperty__Platform__genericProperty,
 			PlatformTables.Properties._GenericProperty__Ressource__genericProperty
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Hardkey = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Hardkey = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._Hardkey__buttonColor,
@@ -3103,9 +2986,9 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _HardkeyType = {};
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _HardkeyType = {};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _InputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _InputDevice = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__drawingCapable,
@@ -3122,7 +3005,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _IntegerProperty = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _IntegerProperty = {
 			PlatformTables.Properties._IntegerProperty__integerValue,
 			PlatformTables.Properties._GenericProperty__propertyName,
 			PlatformTables.Properties._GenericProperty__propertyUnit,
@@ -3130,9 +3013,9 @@ public class PlatformTables
 			PlatformTables.Properties._GenericProperty__Ressource__genericProperty
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _InteractionModality = {};
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _InteractionModality = {};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _InteractionProperty = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _InteractionProperty = {
 			PlatformTables.Properties._InteractionProperty__interactionModality,
 			PlatformTables.Properties._GenericProperty__propertyName,
 			PlatformTables.Properties._GenericProperty__propertyUnit,
@@ -3140,7 +3023,7 @@ public class PlatformTables
 			PlatformTables.Properties._GenericProperty__Ressource__genericProperty
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _InteractionRessource = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _InteractionRessource = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -3148,7 +3031,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Keyboard = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Keyboard = {
 			PlatformTables.Properties._Keyboard__easyTextInput,
 			PlatformTables.Properties._Keyboard__fastTextInput,
 			PlatformTables.Properties._Ressource__genericProperty,
@@ -3162,9 +3045,9 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _KeyboardType = {};
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _KeyboardType = {};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _LightingDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _LightingDevice = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._LightingDevice__lightSize,
 			PlatformTables.Properties._LightingDevice__lightningType,
@@ -3175,7 +3058,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Microphone = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Microphone = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__drawingCapable,
@@ -3192,7 +3075,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Mouse = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Mouse = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Mouse__leftMousebutton,
 			PlatformTables.Properties._Mouse__mainPointingDevice,
@@ -3207,7 +3090,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _OutputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _OutputDevice = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -3215,12 +3098,12 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _PMbase = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _PMbase = {
 			PlatformTables.Properties._PMbase__platformCollection,
 			PlatformTables.Properties._PMbase__ressourceCollection
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Platform = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Platform = {
 			PlatformTables.Properties._Platform__genericProperty,
 			PlatformTables.Properties._Platform__platformId,
 			PlatformTables.Properties._Platform__platformName,
@@ -3229,9 +3112,9 @@ public class PlatformTables
 			PlatformTables.Properties._Platform__PMbase__platformCollection
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _PlatformType = {};
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _PlatformType = {};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _PointingDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _PointingDevice = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._PointingDevice__degreesOfFreedom,
@@ -3251,7 +3134,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _ProprioceptiveInputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _ProprioceptiveInputDevice = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__drawingCapable,
@@ -3268,7 +3151,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _ProprioceptiveOutputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _ProprioceptiveOutputDevice = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -3276,7 +3159,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Ressource = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Ressource = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -3284,11 +3167,11 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Sensibility = {};
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Sensibility = {};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _SizeEvaluation = {};
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _SizeEvaluation = {};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Speaker = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Speaker = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -3296,7 +3179,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _StringProperty = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _StringProperty = {
 			PlatformTables.Properties._GenericProperty__propertyName,
 			PlatformTables.Properties._GenericProperty__propertyUnit,
 			PlatformTables.Properties._StringProperty__stringValue,
@@ -3304,7 +3187,7 @@ public class PlatformTables
 			PlatformTables.Properties._GenericProperty__Ressource__genericProperty
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _TactileInputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _TactileInputDevice = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__drawingCapable,
@@ -3321,7 +3204,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _TactileOutputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _TactileOutputDevice = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -3329,7 +3212,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _Touchscreen = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _Touchscreen = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._Touchscreen__closenessRecognition,
@@ -3357,7 +3240,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _VibrationMotor = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _VibrationMotor = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -3365,7 +3248,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _VisualInputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _VisualInputDevice = {
 			PlatformTables.Properties._ElementaryTasksForInputDevices__accuratePointingCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__alphanumericCapable,
 			PlatformTables.Properties._ElementaryTasksForInputDevices__drawingCapable,
@@ -3382,7 +3265,7 @@ public class PlatformTables
 			PlatformTables.Properties._Ressource__Platform__ressources
 		};
 
-		private static final /*@NonNull*/ ExecutorProperty[] _VisualOutputDevice = {
+		private static final /*@NonNull*/ ExecutorProperty /*@NonNull*/ [] _VisualOutputDevice = {
 			PlatformTables.Properties._Ressource__genericProperty,
 			PlatformTables.Properties._Ressource__ressourceName,
 			PlatformTables.Properties._Ressource__ComplexRessource__subRessources,
@@ -3461,7 +3344,7 @@ public class PlatformTables
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _ElementaryTaskEvaluation__sufficient = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.ELEMENTARY_TASK_EVALUATION.getEEnumLiteral("sufficient"), Types._ElementaryTaskEvaluation, 3);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _ElementaryTaskEvaluation__good = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.ELEMENTARY_TASK_EVALUATION.getEEnumLiteral("good"), Types._ElementaryTaskEvaluation, 4);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _ElementaryTaskEvaluation__veryGood = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.ELEMENTARY_TASK_EVALUATION.getEEnumLiteral("veryGood"), Types._ElementaryTaskEvaluation, 5);
-		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral[] _ElementaryTaskEvaluation = {
+		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral /*@NonNull*/ [] _ElementaryTaskEvaluation = {
 			_ElementaryTaskEvaluation__other,
 			_ElementaryTaskEvaluation__none,
 			_ElementaryTaskEvaluation__insufficient,
@@ -3472,7 +3355,7 @@ public class PlatformTables
 
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _HardkeyType__MachineSpecific = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.HARDKEY_TYPE.getEEnumLiteral("MachineSpecific"), Types._HardkeyType, 0);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _HardkeyType__DialogueSpecific = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.HARDKEY_TYPE.getEEnumLiteral("DialogueSpecific"), Types._HardkeyType, 1);
-		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral[] _HardkeyType = {
+		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral /*@NonNull*/ [] _HardkeyType = {
 			_HardkeyType__MachineSpecific,
 			_HardkeyType__DialogueSpecific
 		};
@@ -3487,7 +3370,7 @@ public class PlatformTables
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _InteractionModality__proprioceptiveOutput = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.INTERACTION_MODALITY.getEEnumLiteral("proprioceptiveOutput"), Types._InteractionModality, 7);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _InteractionModality__other = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.INTERACTION_MODALITY.getEEnumLiteral("other"), Types._InteractionModality, 8);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _InteractionModality__none = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.INTERACTION_MODALITY.getEEnumLiteral("none"), Types._InteractionModality, 9);
-		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral[] _InteractionModality = {
+		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral /*@NonNull*/ [] _InteractionModality = {
 			_InteractionModality__visualInput,
 			_InteractionModality__auditiveInput,
 			_InteractionModality__tactileInput,
@@ -3505,7 +3388,7 @@ public class PlatformTables
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _KeyboardType__numerical = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.KEYBOARD_TYPE.getEEnumLiteral("numerical"), Types._KeyboardType, 2);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _KeyboardType__keypad = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.KEYBOARD_TYPE.getEEnumLiteral("keypad"), Types._KeyboardType, 3);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _KeyboardType__phonepad = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.KEYBOARD_TYPE.getEEnumLiteral("phonepad"), Types._KeyboardType, 4);
-		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral[] _KeyboardType = {
+		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral /*@NonNull*/ [] _KeyboardType = {
 			_KeyboardType__other,
 			_KeyboardType__alphanumerical,
 			_KeyboardType__numerical,
@@ -3520,7 +3403,7 @@ public class PlatformTables
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _PlatformType__Smartphone = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.PLATFORM_TYPE.getEEnumLiteral("Smartphone"), Types._PlatformType, 4);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _PlatformType__Tablet = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.PLATFORM_TYPE.getEEnumLiteral("Tablet"), Types._PlatformType, 5);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _PlatformType__HeadMountedDevice = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.PLATFORM_TYPE.getEEnumLiteral("HeadMountedDevice"), Types._PlatformType, 6);
-		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral[] _PlatformType = {
+		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral /*@NonNull*/ [] _PlatformType = {
 			_PlatformType__other,
 			_PlatformType__ClassicPC,
 			_PlatformType__IndustrialPc,
@@ -3536,7 +3419,7 @@ public class PlatformTables
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _Sensibility__normal = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.SENSIBILITY.getEEnumLiteral("normal"), Types._Sensibility, 3);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _Sensibility__sensitive = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.SENSIBILITY.getEEnumLiteral("sensitive"), Types._Sensibility, 4);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _Sensibility__highSensitive = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.SENSIBILITY.getEEnumLiteral("highSensitive"), Types._Sensibility, 5);
-		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral[] _Sensibility = {
+		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral /*@NonNull*/ [] _Sensibility = {
 			_Sensibility__other,
 			_Sensibility__nonsensitive,
 			_Sensibility__lowSensitive,
@@ -3551,7 +3434,7 @@ public class PlatformTables
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _SizeEvaluation__big = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.SIZE_EVALUATION.getEEnumLiteral("big"), Types._SizeEvaluation, 3);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _SizeEvaluation__veryBig = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.SIZE_EVALUATION.getEEnumLiteral("veryBig"), Types._SizeEvaluation, 4);
 		public static final /*@NonNull*/ EcoreExecutorEnumerationLiteral _SizeEvaluation__jumbo = new EcoreExecutorEnumerationLiteral(PlatformPackage.Literals.SIZE_EVALUATION.getEEnumLiteral("jumbo"), Types._SizeEvaluation, 5);
-		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral[] _SizeEvaluation = {
+		private static final /*@NonNull*/ EcoreExecutorEnumerationLiteral /*@NonNull*/ [] _SizeEvaluation = {
 			_SizeEvaluation__verySmall,
 			_SizeEvaluation__small,
 			_SizeEvaluation__middle,
