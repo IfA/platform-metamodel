@@ -114,7 +114,7 @@
         xsi:type="setup:VariableTask"
         id="clone.origin.platform"
         name="clone.origin.platform"
-        defaultValue="ssh://git@eats3.et.tu-dresden.de/staff/mfreund/projects/platform"
+        defaultValue="ssh://git@eats3.et.tu-dresden.de/projects/platform"
         label="Platform clone origin">
       <description>The URL where all projects related to the 'platform' will be cloned from.</description>
     </setupTask>
