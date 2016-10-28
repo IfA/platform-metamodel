@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="Platform Update Site" url="https://eats3.et.tu-dresden.de/git/staff/matthias/projects/platform/updates">
+   <description name="Platform Update Site" url="https://eats3.et.tu-dresden.de/eclipse/updates">
       This is the update site for the various Platform plug-ins.
    </description>
    <feature url="features/de.mfreund.platform.feature_1.0.0.qualifier.jar" id="de.mfreund.platform.feature" version="1.0.0.qualifier">
