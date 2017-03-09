@@ -18,7 +18,7 @@
    </license>
 
    <url>
-      <update label="Update Site of the Platform Metamodel Project" url="https://eats3.et.tu-dresden.de/eclipse/updates"/>
+      <update label="Update Site of the Platform Metamodel Project" url="https://agtele.eats.et.tu-dresden.de/eclipse/updates"/>
    </url>
 
    <includes
