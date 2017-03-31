@@ -15,7 +15,7 @@
   <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Doomph.redirection.setups"
-      value="=https://agtele.eats.et.tu-dresden.de/eclipse/setups/Platform.setup->${clone.location.platform.setup|uri}/de.mfreund.platform.setup/Platform.setup"
+      value="=https://agtele.eats.et.tu-dresden.de/eclipse/setups/Platform.setup->${clone.location.platform.main|uri}/de.mfreund.platform.setup/Platform.setup"
       vm="true"/>
   <setupTask
       xsi:type="setup:EclipseIniTask"
