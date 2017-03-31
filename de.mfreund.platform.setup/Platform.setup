@@ -36,8 +36,18 @@
     <requirement
         name="org.eclipse.ocl.examples.feature.group"
         versionRange="6.0.1"/>
+    <requirement
+        name="de.tud.et.ifa.agtele.eclipse.commons.feature.feature.group"
+        optional="true"/>
+    <requirement
+        name="de.weingardt.mylyn.gitlab.feature.group"
+        optional="true"/>
     <repository
         url="http://download.eclipse.org/epsilon/updates/"/>
+    <repository
+        url="https://agtele.eats.et.tu-dresden.de/eclipse/updates/"/>
+    <repository
+        url="http://pweingardt.github.com/mylyn-gitlab/"/>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
