@@ -114,7 +114,7 @@
         xsi:type="setup:VariableTask"
         id="clone.origin.platform"
         name="clone.origin.platform"
-        defaultValue="git@git.agtele.eats.et.tu-dresden.de:projects/platform"
+        defaultValue="git@git.agtele.eats.et.tu-dresden.de:agtele"
         label="Platform clone origin">
       <description>The URL where all projects related to the 'platform' will be cloned from.</description>
     </setupTask>
@@ -122,7 +122,7 @@
         xsi:type="setup:VariableTask"
         id="clone.location.platform"
         name="clone.location.platform"
-        defaultValue="${install.root}\repos\platform"
+        defaultValue="${install.root}\repos"
         label="Platform clone location">
       <description>The folder where all projects related to the 'platform' will be cloned to.</description>
     </setupTask>
@@ -150,52 +150,31 @@
       <description>Whether or not to append a '.git' suffix to cloned repositories.</description>
     </setupTask>
     <setupTask
+        xsi:type="setup:VariableTask"
+        id="gitlab.user"
+        name="gitlab.user"
+        label="Gitlab user name">
+      <description>Gitlab user name</description>
+    </setupTask>
+    <setupTask
+        xsi:type="setup:VariableTask"
+        id="gitlab.password"
+        type="PASSWORD"
+        name="gitlab.password"
+        label="Gitlab password">
+      <description>Gitlab password</description>
+    </setupTask>
+    <setupTask
         xsi:type="setup:CompoundTask"
         id="clone.location.definitions"
         name="Clone location definitions">
       <setupTask
           xsi:type="setup:VariableTask"
-          id="clone.location.platform.samples"
-          name="clone.location.platform.samples"
-          value="${clone.location.platform}\de.mfreund.platform.samples${clone.append.suffix|trimRight}"
+          id="clone.location.platform.main"
+          name="clone.location.platform.main"
+          value="${clone.location.platform}\de.mfreund.platform${clone.append.suffix|trimRight}"
           defaultValue=""
           label="Clone location platform samples">
-        <description></description>
-      </setupTask>
-      <setupTask
-          xsi:type="setup:VariableTask"
-          id="clone.location.platform.feature"
-          name="clone.location.platform.feature"
-          value="${clone.location.platform}\de.mfreund.platform.feature${clone.append.suffix|trimRight}"
-          defaultValue=""
-          label="Clone location platform feature">
-        <description></description>
-      </setupTask>
-      <setupTask
-          xsi:type="setup:VariableTask"
-          id="clone.location.platform.model"
-          name="clone.location.platform.model"
-          value="${clone.location.platform}\de.mfreund.platform.model${clone.append.suffix|trimRight}"
-          defaultValue=""
-          label="Clone location platform model">
-        <description></description>
-      </setupTask>
-      <setupTask
-          xsi:type="setup:VariableTask"
-          id="clone.location.platform.setup"
-          name="clone.location.platform.setup"
-          value="${clone.location.platform}\de.mfreund.platform.setup${clone.append.suffix|trimRight}"
-          defaultValue=""
-          label="Clone location platform setup">
-        <description></description>
-      </setupTask>
-      <setupTask
-          xsi:type="setup:VariableTask"
-          id="clone.location.platform.update-site"
-          name="clone.location.platform.update-site"
-          value="${clone.location.platform}\de.mfreund.platform.update-site${clone.append.suffix|trimRight}"
-          defaultValue=""
-          label="Clone location platform update-site">
         <description></description>
       </setupTask>
       <description>Definition of clone locations for projects</description>
@@ -206,38 +185,10 @@
         name="Clone Projects">
       <setupTask
           xsi:type="git:GitCloneTask"
-          id="clone.platform.samples"
-          location="${clone.location.platform.samples}"
-          remoteURI="${clone.origin.platform}/de.mfreund.platform.samples.git">
-        <description>Clone the 'de.mfreund.platform.samples.git' repository.</description>
-      </setupTask>
-      <setupTask
-          xsi:type="git:GitCloneTask"
-          id="clone.platform.feature"
-          location="${clone.location.platform.feature}"
-          remoteURI="${clone.origin.platform}/de.mfreund.platform.feature.git">
-        <description>Clone the 'de.mfreund.platform.feature.git' repository.</description>
-      </setupTask>
-      <setupTask
-          xsi:type="git:GitCloneTask"
-          id="clone.platform.model"
-          location="${clone.location.platform.model}"
-          remoteURI="${clone.origin.platform}/de.mfreund.platform.model.git">
-        <description>Clone the 'de.mfreund.platform.model.git' repository.</description>
-      </setupTask>
-      <setupTask
-          xsi:type="git:GitCloneTask"
-          id="clone.platform.setup"
-          location="${clone.location.platform.setup}"
-          remoteURI="${clone.origin.platform}/de.mfreund.platform.setup.git">
-        <description>Clone the 'de.mfreund.platform.setup.git' repository.</description>
-      </setupTask>
-      <setupTask
-          xsi:type="git:GitCloneTask"
-          id="clone.platform.update-site"
-          location="${clone.location.platform.update-site}"
-          remoteURI="${clone.origin.platform}/de.mfreund.platform.update-site.git">
-        <description>Clone the 'de.mfreund.platform.update-site.git' repository.</description>
+          id="clone.platform"
+          location="${clone.location.platform.main}"
+          remoteURI="${clone.origin.platform}/de.mfreund.platform.git">
+        <description>Clone the 'de.mfreund.platform.git' repository.</description>
       </setupTask>
       <description>Clone all necessary git repositories.</description>
     </setupTask>
@@ -247,33 +198,9 @@
         name="Import Projects">
       <setupTask
           xsi:type="projects:ProjectsImportTask"
-          id="import.platform.samples">
+          id="import.platform">
         <sourceLocator
-            rootFolder="${clone.location.platform}\de.mfreund.platform.samples.git"/>
-      </setupTask>
-      <setupTask
-          xsi:type="projects:ProjectsImportTask"
-          id="import.platform.feature">
-        <sourceLocator
-            rootFolder="${clone.location.platform}\de.mfreund.platform.feature.git"/>
-      </setupTask>
-      <setupTask
-          xsi:type="projects:ProjectsImportTask"
-          id="import.platform.model">
-        <sourceLocator
-            rootFolder="${clone.location.platform}\de.mfreund.platform.model.git"/>
-      </setupTask>
-      <setupTask
-          xsi:type="projects:ProjectsImportTask"
-          id="import.platform.setup">
-        <sourceLocator
-            rootFolder="${clone.location.platform}\de.mfreund.platform.setup.git"/>
-      </setupTask>
-      <setupTask
-          xsi:type="projects:ProjectsImportTask"
-          id="import.platform.update-site">
-        <sourceLocator
-            rootFolder="${clone.location.platform}\de.mfreund.platform.update-site.git"/>
+            rootFolder="${clone.location.platform.main}"/>
       </setupTask>
       <description>Import all necessary projects.</description>
     </setupTask>
