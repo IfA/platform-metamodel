@@ -119,7 +119,7 @@
         value="true"/>
     <description>This sets a bunch of preferences.</description>
   </setupTask>
-  <stream name="master">
+  <stream name="develop">
     <setupTask
         xsi:type="setup:VariableTask"
         id="clone.origin.platform"
@@ -198,6 +198,30 @@
           id="clone.platform"
           location="${clone.location.platform.main}"
           remoteURI="${clone.origin.platform}/de.mfreund.platform.git">
+        <configSections
+            name="gitflow &quot;prefix&quot;">
+          <properties
+              key="feature"
+              value="feature/"/>
+          <properties
+              key="release"
+              value="release/"/>
+          <properties
+              key="hotfix"
+              value="hotfix/"/>
+          <properties
+              key="versiontag"
+              value=""/>
+        </configSections>
+        <configSections
+            name="gitflow &quot;branch&quot;">
+          <properties
+              key="develop"
+              value="develop"/>
+          <properties
+              key="master"
+              value="master"/>
+        </configSections>
         <description>Clone the 'de.mfreund.platform.git' repository.</description>
       </setupTask>
       <description>Clone all necessary git repositories.</description>
