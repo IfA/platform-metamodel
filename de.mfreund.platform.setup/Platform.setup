@@ -124,9 +124,9 @@
         xsi:type="setup:VariableTask"
         id="clone.origin.platform"
         name="clone.origin.platform"
-        defaultValue="git@git.agtele.eats.et.tu-dresden.de:agtele"
+        defaultValue="git@git.agtele.eats.et.tu-dresden.de:agtele/de.mfreund.platform.git"
         label="Platform clone origin">
-      <description>The URL where all projects related to the 'platform' will be cloned from.</description>
+      <description>The URL where the 'platform' repository will be cloned from.</description>
     </setupTask>
     <setupTask
         xsi:type="setup:VariableTask"
@@ -134,7 +134,7 @@
         name="clone.location.platform"
         defaultValue="${install.root}\repos"
         label="Platform clone location">
-      <description>The folder where all projects related to the 'platform' will be cloned to.</description>
+      <description>The folder where the 'platform' repository will be cloned to.</description>
     </setupTask>
     <setupTask
         xsi:type="setup:VariableTask"
@@ -197,7 +197,7 @@
           xsi:type="git:GitCloneTask"
           id="clone.platform"
           location="${clone.location.platform.main}"
-          remoteURI="${clone.origin.platform}/de.mfreund.platform.git">
+          remoteURI="${clone.origin.platform}">
         <configSections
             name="gitflow &quot;prefix&quot;">
           <properties
