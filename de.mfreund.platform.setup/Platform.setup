@@ -162,20 +162,6 @@
     </setupTask>
     <setupTask
         xsi:type="setup:VariableTask"
-        id="clone.append.suffix"
-        name="clone.append.suffix"
-        defaultValue=" "
-        label="Suffix for cloned repositories">
-      <choice
-          value=" "
-          label="do not append anything"/>
-      <choice
-          value=".git"
-          label=".git"/>
-      <description>Whether or not to append a '.git' suffix to cloned repositories.</description>
-    </setupTask>
-    <setupTask
-        xsi:type="setup:VariableTask"
         id="gitlab.user"
         name="gitlab.user"
         label="Gitlab user name">
@@ -197,7 +183,7 @@
           xsi:type="setup:VariableTask"
           id="clone.location.platform.main"
           name="clone.location.platform.main"
-          value="${clone.location.platform}\de.mfreund.platform${clone.append.suffix|trimRight}"
+          value="${clone.location.platform}\de.mfreund.platform"
           defaultValue=""
           label="Clone location platform samples">
         <description></description>
