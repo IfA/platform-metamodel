@@ -2,32 +2,37 @@
 <feature
       id="de.mfreund.platform.feature"
       label="Platform"
-      version="1.0.0.qualifier"
-      provider-name="mfreund">
+      version="1.1.0.qualifier"
+      provider-name="Matthias Freund, Institute of Automation, TU Dresden">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description>
+      This feature includes the plugins required for the specification of platform models based on the platform metamodel.
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
+   <copyright url="https://www.eclipse.org/legal/epl-2.0/">
+      Copyright (C) 2015-2018 Matthias Freund and others, Institute
+of Automation, TU Dresden
+This program and the accompanying materials are made available
+under the terms of the Eclipse Public License 2.0 which is available
+at https://www.eclipse.org/legal/epl-2.0/
+Contributors:
+Institute of Automation, TU Dresden - Initial API and implementation
+SPDX-License-Identifier: EPL-2.0
    </copyright>
 
-   <license url="http://www.example.com/license">
-      [Enter License Description here.]
+   <license url="%licenseURL">
+      %license
    </license>
 
    <url>
       <update label="Update Site of the Platform Metamodel Project" url="https://agtele.eats.et.tu-dresden.de/eclipse/updates"/>
+      <discovery label="Eclipse-Commons Update Site" url="https://agtele.eats.et.tu-dresden.de/projects/eclipse-commons/updates/"/>
+      <discovery label="Eclipse-Commons Update Site" url="https://agtele.eats.et.tu-dresden.de/projects/eclipse-commons/updates"/>
+      <discovery label="Eclipse Neon Release" url="http://download.eclipse.org/eclipse/updates/4.6"/>
+      <discovery label="Eclipse Neon Release" url="http://download.eclipse.org/eclipse/updates/4.6/"/>
+      <discovery label="Eclipse Oxygen Release" url="http://download.eclipse.org/eclipse/updates/4.7"/>
+      <discovery label="Eclipse Oxygen Release" url="http://download.eclipse.org/eclipse/updates/4.7/"/>
    </url>
-
-   <includes
-         id="org.eclipse.emf.ecore"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.ocl.examples"
-         version="0.0.0"/>
 
    <requires>
       <import plugin="org.eclipse.core.runtime"/>

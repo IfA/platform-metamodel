@@ -3,7 +3,7 @@
    <description name="Platform Update Site" url="https://agtele.eats.et.tu-dresden.de/eclipse/updates">
       This is the update site for the various Platform plug-ins.
    </description>
-   <feature url="features/de.mfreund.platform.feature_1.0.0.qualifier.jar" id="de.mfreund.platform.feature" version="1.0.0.qualifier">
+   <feature url="features/de.mfreund.platform.feature_1.1.0.qualifier.jar" id="de.mfreund.platform.feature" version="1.1.0.qualifier">
       <category name="de.mfreund.platform.category.pamtram"/>
    </feature>
    <category-def name="de.mfreund.platform.category.pamtram" label="Platform"/>

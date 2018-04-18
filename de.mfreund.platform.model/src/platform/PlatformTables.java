@@ -1,14 +1,15 @@
 /*******************************************************************************
- *************************************************************************
- * This code is 100% auto-generated
- * from:
- *   /de.mfreund.platform.model/model/platform.ecore
- * using:
- *   /de.mfreund.platform.model/model/platform.genmodel
- *   org.eclipse.ocl.examples.codegen.oclinecore.OCLinEcoreTables
- *
- * Do not edit it.
- *******************************************************************************/
+ * Copyright (C) 2015-2018 Matthias Freund and others, Institute of Automation, TU Dresden
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * Contributors:
+ *   Institute of Automation, TU Dresden - Initial API and implementation
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ ******************************************************************************/
 package platform;
 
 import org.eclipse.ocl.pivot.internal.library.ecore.EcoreExecutorEnumeration;
