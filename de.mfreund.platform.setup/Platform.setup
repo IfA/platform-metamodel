@@ -146,7 +146,7 @@
         xsi:type="setup:VariableTask"
         id="clone.origin.platform"
         name="clone.origin.platform"
-        defaultValue="git@git.agtele.eats.et.tu-dresden.de:agtele/de.mfreund.platform.git"
+        defaultValue="git@git.agtele.eats.et.tu-dresden.de:agtele-public/de.mfreund.platform.git"
         label="Platform clone origin">
       <description>The URL where the 'platform' repository will be cloned from.</description>
     </setupTask>
