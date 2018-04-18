@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Copyright (C) 2015-2018 Matthias Freund and others, Institute of Automation, TU Dresden
-  
-  This program and the accompanying materials are made
-  available under the terms of the Eclipse Public License 2.0
-  which is available at https://www.eclipse.org/legal/epl-2.0/
-  
-  Contributors:
-    Institute of Automation, TU Dresden - Initial API and implementation
-  
-  SPDX-License-Identifier: EPL-2.0
--->
 <setup:Project
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
@@ -71,6 +59,9 @@
         optional="true"/>
     <requirement
         name="com.wdev91.eclipse.copyright.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.egit.gitflow.feature.feature.group"
+        versionRange="4.0.0"/>
     <repository
         url="http://download.eclipse.org/epsilon/updates/"/>
     <repository
