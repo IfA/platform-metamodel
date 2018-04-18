@@ -1,6 +1,6 @@
 # Platform Metamodel 
 
-A generic, extensible, [EMF][]-based platofrm modeling language for the *Model-based Development of User Interfaces* (MBUID) that was developed during the DFG project *KonTrans - Kontextabhängige Transformationsmodelle* (Context-dependent Transformation Models) that was conducted at [Institute of Automation at TU Dresden](http://www.et.tu-dresden.de/ifa).
+A generic, extensible, [EMF][]-based platform modeling language for the *Model-based Development of User Interfaces* (MBUID). It was developed as part of the DFG research project *KonTrans - Kontextabhängige Transformationsmodelle* (Context-dependent Transformation Models) that was conducted at [Institute of Automation at TU Dresden](http://www.et.tu-dresden.de/ifa).
 
 ## Installation
 
@@ -39,7 +39,7 @@ In order to execute the installer, perform the following steps:
 
 *  The **Feature Project** contains an Eclipse feature for the platform metamodel that can be installed into an Eclipse instance.
 *  The **Model Project** defines the core language model of the modeling language, i.e. the [EMF][]-based metamodel.
-*  The **Edit Project** provides edit support for platform models.
+*  The **Samples Project** provides various sample platform models created based on the modeling language.
 *  The **Update Site Project** provides the Eclispe update site definition in order to build the installable plugins using the feature project.
 *  The **Setup Project** provides the setup file that allows a quick start for developers by using the Eclipse Installer.
 
