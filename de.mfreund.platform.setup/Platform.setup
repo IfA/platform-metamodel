@@ -57,12 +57,16 @@
     <requirement
         name="de.weingardt.mylyn.gitlab.feature.group"
         optional="true"/>
+    <requirement
+        name="com.wdev91.eclipse.copyright.feature.feature.group"/>
     <repository
         url="http://download.eclipse.org/epsilon/updates/"/>
     <repository
         url="https://agtele.eats.et.tu-dresden.de/eclipse/updates/"/>
     <repository
         url="http://pweingardt.github.com/mylyn-gitlab/"/>
+    <repository
+        url="https://dl.bintray.com/jmini/Eclipse-Copyright-Generator/"/>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
